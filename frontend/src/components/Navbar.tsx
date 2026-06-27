@@ -1,13 +1,35 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { supabase } from "@/lib/supabase";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [session, setSession] = useState<any>(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setSession(null);
+  };
 
   const navLinks = [
     { name: "Trang chủ", href: "/" },
@@ -57,12 +79,26 @@ export function Navbar() {
           </button>
 
           {/* Auth Button */}
-          <Link
-            href="/login"
-            className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all"
-          >
-            Đăng ký / Đăng nhập
-          </Link>
+          {session ? (
+            <div className="flex items-center gap-4">
+              <span className="text-[15px] font-medium text-slate-700">
+                {session.user.user_metadata?.full_name || session.user.email}
+              </span>
+              <button
+                onClick={handleLogout}
+                className="inline-flex items-center justify-center px-4 py-2 text-[14px] font-bold text-red-600 border border-red-200 hover:bg-red-50 rounded-lg transition-all"
+              >
+                Đăng xuất
+              </button>
+            </div>
+          ) : (
+            <Link
+              href="/login"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all"
+            >
+              Đăng ký / Đăng nhập
+            </Link>
+          )}
         </div>
 
         {/* Mobile menu button */}
@@ -103,12 +139,21 @@ export function Navbar() {
                 <Globe className="w-4 h-4" />
                 VI - Tiếng Việt
               </button>
-              <Link
-                href="/login"
-                className="block text-center px-4 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-full transition-all"
-              >
-                Đăng ký / Đăng nhập
-              </Link>
+              {session ? (
+                <button
+                  onClick={handleLogout}
+                  className="block w-full text-center px-4 py-3 text-sm font-semibold text-red-600 border border-red-200 hover:bg-red-50 rounded-lg transition-all"
+                >
+                  Đăng xuất
+                </button>
+              ) : (
+                <Link
+                  href="/login"
+                  className="block text-center px-4 py-3 text-sm font-semibold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all"
+                >
+                  Đăng ký / Đăng nhập
+                </Link>
+              )}
             </div>
           </nav>
         </motion.div>
