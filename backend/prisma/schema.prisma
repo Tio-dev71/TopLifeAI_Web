@@ -1,0 +1,166 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPER_ADMIN
+  ADMIN
+  DOCTOR
+  PATIENT
+  COORDINATOR
+}
+
+model User {
+  id             String    @id @default(uuid())
+  email          String    @unique
+  password       String?
+  firstName      String?
+  lastName       String?
+  role           Role      @default(PATIENT)
+  phone          String?
+  avatarUrl      String?
+  googleId       String?   @unique
+  appleId        String?   @unique
+  isActive       Boolean   @default(true)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  patientProfile PatientProfile?
+  doctorProfile  DoctorProfile?
+  articles       Article[]
+}
+
+model PatientProfile {
+  id             String    @id @default(uuid())
+  userId         String    @unique
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  dateOfBirth    DateTime?
+  gender         String?
+  bloodType      String?
+  height         Float?    // in cm
+  weight         Float?    // in kg
+  allergies      String[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  activityRecords ActivityRecord[]
+  healthRecords   HealthRecord[]
+  geneReports     GeneReport[]
+  appointments    Appointment[]
+  cases           InternationalCase[]
+}
+
+model DoctorProfile {
+  id             String    @id @default(uuid())
+  userId         String    @unique
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  specialty      String
+  experience     Int       // years of experience
+  certifications String[]
+  languages      String[]
+  about          String?   @db.Text
+  consultationFee Float    @default(0)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  appointments    Appointment[]
+}
+
+model ActivityRecord {
+  id               String         @id @default(uuid())
+  patientProfileId String
+  patientProfile   PatientProfile @relation(fields: [patientProfileId], references: [id], onDelete: Cascade)
+  date             DateTime       @db.Date
+  steps            Int            @default(0)
+  distance         Float          @default(0) // in km
+  calories         Float          @default(0)
+  runningDistance  Float          @default(0) // in km
+  walkingDistance  Float          @default(0) // in km
+  cyclingDistance  Float          @default(0) // in km
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@unique([patientProfileId, date])
+}
+
+model HealthRecord {
+  id               String         @id @default(uuid())
+  patientProfileId String
+  patientProfile   PatientProfile @relation(fields: [patientProfileId], references: [id], onDelete: Cascade)
+  title            String
+  type             String         // REPORT, LAB_RESULT, MRI, CT_SCAN, X_RAY, PRESCRIPTION
+  fileUrl          String         // S3 URL
+  fileType         String         // PDF, JPG, PNG
+  notes            String?        @db.Text
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model GeneReport {
+  id               String         @id @default(uuid())
+  patientProfileId String
+  patientProfile   PatientProfile @relation(fields: [patientProfileId], references: [id], onDelete: Cascade)
+  reportUrl        String         // S3 URL
+  riskScore        Json?          // Disease risk scoring data
+  recommendations  Json?          // Personalized recommendations
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+model Appointment {
+  id               String            @id @default(uuid())
+  patientProfileId String
+  patientProfile   PatientProfile    @relation(fields: [patientProfileId], references: [id], onDelete: Cascade)
+  doctorProfileId  String
+  doctorProfile    DoctorProfile     @relation(fields: [doctorProfileId], references: [id], onDelete: Cascade)
+  startTime        DateTime
+  endTime          DateTime
+  status           AppointmentStatus @default(PENDING)
+  videoLink        String?
+  notes            String?           @db.Text
+  paymentStatus    String            @default("PENDING") // PENDING, PAID, REFUNDED
+  amount           Float             @default(0)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+model InternationalCase {
+  id               String         @id @default(uuid())
+  patientProfileId String
+  patientProfile   PatientProfile @relation(fields: [patientProfileId], references: [id], onDelete: Cascade)
+  status           String         // REVIEW, MATCHING, PLANNING, ARRIVAL, TREATMENT, FOLLOW_UP
+  notes            String?        @db.Text
+  visaNeeded       Boolean        @default(false)
+  accommodation    Boolean        @default(false)
+  airportPickup    Boolean        @default(false)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+}
+
+model Article {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  content     String   @db.Text
+  excerpt     String?
+  coverImage  String?
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+  category    String
+  tags        String[]
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

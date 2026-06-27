@@ -1,0 +1,291 @@
+const fs = require('fs');
+const file = 'frontend/src/app/contact/page.tsx';
+
+const content = `"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Phone, MessageCircle, Mail, MapPin, Calendar, Clock, ChevronDown, CheckCircle2, ChevronRight, User, ClipboardList, Info } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+export default function ContactPage() {
+  const [activeFaq, setActiveFaq] = useState<number | null>(0);
+
+  const faqs = [
+    { q: "ToplifeAI cung cấp những dịch vụ gì?", a: "ToplifeAI cung cấp nền tảng chăm sóc sức khỏe toàn diện tích hợp AI, bao gồm: phân tích gene, hồ sơ sức khỏe số, tư vấn trực tuyến với bác sĩ, và các chương trình chăm sóc sức khỏe cá nhân hóa." },
+    { q: "Làm thế nào để đặt lịch khám với bác sĩ?", a: "Bạn có thể đặt lịch thông qua ứng dụng ToplifeAI, website tại mục 'Bác sĩ & chuyên gia', hoặc gọi trực tiếp đến Hotline +84 888 123 456 để được hỗ trợ." },
+    { q: "Tôi có thể tư vấn từ xa không?", a: "Hoàn toàn có thể. Nền tảng của chúng tôi hỗ trợ tư vấn video call trực tuyến chất lượng cao với các bác sĩ và chuyên gia y tế trên toàn cầu." },
+    { q: "Thông tin cá nhân của tôi có được bảo mật không?", a: "ToplifeAI áp dụng tiêu chuẩn bảo mật y tế quốc tế (HIPAA, GDPR) và mã hóa end-to-end cho mọi dữ liệu sức khỏe của bạn." },
+    { q: "ToplifeAI có hỗ trợ bệnh nhân quốc tế không?", a: "Có. Chúng tôi có chương trình riêng cho bệnh nhân quốc tế bao gồm phiên dịch, hỗ trợ visa y tế, đặt vé máy bay và nơi lưu trú." },
+  ];
+
+  return (
+    <div className="flex flex-col min-h-screen bg-white">
+      {/* Hero & Form Section */}
+      <section className="relative pt-10 pb-20 lg:pt-16 lg:pb-32 overflow-hidden bg-gradient-to-r from-[#F0F7F9] to-[#E3F2F3] lg:to-transparent">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 relative z-10">
+          <div className="flex items-center text-[13px] text-slate-500 mb-10 font-medium">
+            <Link href="/" className="hover:text-teal-600 transition-colors">Trang chủ</Link>
+            <span className="mx-2">&rsaquo;</span>
+            <span className="text-slate-800">Liên hệ</span>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+             <div className="lg:w-[55%] flex flex-col pt-4">
+                <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold tracking-tight text-[#1B3A6B] leading-[1.1] mb-4">
+                  Liên hệ với ToplifeAI
+                </h1>
+                <h2 className="text-[1.75rem] lg:text-[2.25rem] font-bold text-teal-600 leading-tight mb-6 max-w-lg">
+                  Chúng tôi luôn sẵn sàng đồng hành cùng bạn
+                </h2>
+                <p className="text-[16px] text-slate-600 max-w-[450px] leading-relaxed mb-8 font-medium">
+                  Mọi thắc mắc, nhu cầu tư vấn hoặc hợp tác, đội ngũ ToplifeAI sẽ phản hồi nhanh chóng và hỗ trợ bạn tốt nhất.
+                </p>
+                <div className="space-y-5 relative z-20">
+                   <div className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center"><CheckCircle2 className="w-3.5 h-3.5" /></div> <span className="text-[15px] text-[#1B3A6B] font-bold">Tư vấn chuyên sâu với bác sĩ & chuyên gia</span></div>
+                   <div className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center"><CheckCircle2 className="w-3.5 h-3.5" /></div> <span className="text-[15px] text-[#1B3A6B] font-bold">Hỗ trợ bệnh nhân quốc tế 24/7</span></div>
+                   <div className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center"><CheckCircle2 className="w-3.5 h-3.5" /></div> <span className="text-[15px] text-[#1B3A6B] font-bold">Bảo mật thông tin tuyệt đối</span></div>
+                </div>
+                {/* Background Support Girl Image */}
+                <div className="relative w-full h-[350px] lg:h-[450px] mt-8 lg:-mt-20 lg:ml-20 pointer-events-none z-10">
+                   <Image src="/anh1tranglienhe.png" alt="Customer Support" fill className="object-contain object-bottom lg:object-right-bottom" priority />
+                </div>
+             </div>
+             
+             <div className="lg:w-[45%] relative z-30">
+                <Card className="border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] bg-white p-8 lg:p-10 rounded-[24px]">
+                   <h3 className="text-[20px] font-bold text-[#1B3A6B] mb-2">Gửi yêu cầu cho chúng tôi</h3>
+                   <p className="text-[13px] text-slate-500 mb-8 font-medium">Vui lòng điền đầy đủ thông tin, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.</p>
+                   
+                   <form className="space-y-4">
+                      <div className="relative">
+                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                            <User className="w-4 h-4" />
+                         </div>
+                         <Input placeholder="Họ và tên*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px]" required />
+                      </div>
+                      <div className="relative">
+                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                            <Mail className="w-4 h-4" />
+                         </div>
+                         <Input type="email" placeholder="Email*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px]" required />
+                      </div>
+                      <div className="relative">
+                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                            <Phone className="w-4 h-4" />
+                         </div>
+                         <Input type="tel" placeholder="Số điện thoại*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px]" required />
+                      </div>
+                      <div className="relative flex items-center">
+                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
+                            <ClipboardList className="w-4 h-4" />
+                         </div>
+                         <select className="w-full pl-11 pr-10 h-[48px] rounded-[8px] bg-white border border-slate-200 text-[14px] text-slate-500 appearance-none outline-none focus:ring-1 focus:ring-teal-500 transition-shadow">
+                            <option value="" disabled selected>Chọn chủ đề quan tâm*</option>
+                            <option value="tu-van">Tư vấn khám bệnh</option>
+                            <option value="gene">Xét nghiệm Gene</option>
+                            <option value="hop-tac">Hợp tác đối tác</option>
+                            <option value="khac">Khác</option>
+                         </select>
+                         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                      </div>
+                      <div className="relative">
+                         <div className="absolute left-4 top-4 text-slate-400">
+                            <MessageCircle className="w-4 h-4" />
+                         </div>
+                         <textarea className="w-full min-h-[100px] pl-11 pr-4 py-3 rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-600 outline-none focus:ring-1 focus:ring-teal-500 transition-shadow resize-none" placeholder="Nội dung tin nhắn*" required />
+                      </div>
+                      
+                      <div className="flex items-start gap-3 py-2">
+                         <input type="checkbox" id="terms" className="mt-0.5 w-4 h-4 text-teal-600 rounded border-slate-300 focus:ring-teal-500" required />
+                         <label htmlFor="terms" className="text-[12px] text-slate-500 font-medium">
+                           Tôi đồng ý với <Link href="#" className="text-teal-600 hover:underline font-bold">Chính sách bảo mật</Link> của ToplifeAI
+                         </label>
+                      </div>
+
+                      <Button className="w-full h-[48px] text-[15px] font-bold bg-teal-600 hover:bg-teal-700 rounded-[8px] shadow-[0_4px_14px_0_rgba(13,148,136,0.39)] transition-shadow">
+                        Gửi yêu cầu
+                      </Button>
+                   </form>
+                </Card>
+             </div>
+          </div>
+        </div>
+
+        {/* Faint Background Right Half */}
+        <div className="absolute top-0 right-0 w-full lg:w-[45%] h-full z-0 opacity-40 lg:opacity-100 pointer-events-none mix-blend-multiply lg:mix-blend-normal">
+           <div className="absolute inset-0 bg-gradient-to-r from-[#F0F7F9] via-[#F0F7F9]/80 lg:via-transparent to-transparent z-10 w-[60%] lg:w-[30%]"></div>
+        </div>
+      </section>
+
+      {/* Quick Contact Channels */}
+      <section className="py-20 bg-white">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 text-center">
+           <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">Liên hệ nhanh qua các kênh</h2>
+           
+           <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+              {[
+                { icon: <Phone className="w-6 h-6 text-teal-600" />, title: "Hotline", value: "+84 888 123 456", sub: "Hỗ trợ 24/7", subIcon: <Clock className="w-3.5 h-3.5" /> },
+                { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: "Zalo OA", value: "ToplifeAI Official", sub: "Nhắn tin ngay", subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
+                { icon: <Mail className="w-6 h-6 text-teal-600" />, title: "Email", value: "hello@toplifeai.com", sub: "Phản hồi trong 2h", subIcon: <Clock className="w-3.5 h-3.5" /> },
+                { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: "WhatsApp", value: "+84 888 123 456", sub: "Chat ngay", subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
+                { icon: <Calendar className="w-6 h-6 text-teal-600" />, title: "Đặt lịch tư vấn", value: "Chọn thời gian phù hợp", sub: "với bạn", isLink: true, linkText: "Đặt lịch ngay →" },
+              ].map((item, idx) => (
+                <Card key={idx} className="border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-[20px] transition-all bg-white cursor-pointer group flex flex-col h-full">
+                   <CardContent className="p-8 flex flex-col items-center text-center flex-1 justify-center">
+                      <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                         {item.icon}
+                      </div>
+                      <h4 className="font-bold text-[16px] text-[#1B3A6B] mb-2">{item.title}</h4>
+                      <p className={\`font-bold text-[14px] leading-snug \${item.isLink ? 'text-slate-600 mb-1' : 'text-teal-600 mb-3'}\`}>{item.value}</p>
+                      
+                      {item.isLink ? (
+                         <>
+                            <span className="text-[12px] text-slate-500 font-medium mb-4">{item.sub}</span>
+                            <span className="text-[13px] text-teal-600 font-bold mt-auto">{item.linkText}</span>
+                         </>
+                      ) : (
+                         <div className="flex items-center gap-1.5 text-slate-400 mt-auto">
+                            {item.subIcon}
+                            <span className="text-[12px] font-medium">{item.sub}</span>
+                         </div>
+                      )}
+                   </CardContent>
+                </Card>
+              ))}
+           </div>
+        </div>
+      </section>
+
+      {/* Offices */}
+      <section className="py-20 bg-[#F8FBFC]">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 text-center">
+           <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">Văn phòng của ToplifeAI</h2>
+           
+           <div className="grid lg:grid-cols-3 gap-8 text-left mb-12">
+              {[
+                { img: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Trụ sở chính", city: "Hà Nội", address: "Tầng 12, Tòa nhà Center Building,\n1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội", phone: "+84 888 123 456", email: "hanoi@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
+                { img: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng", city: "TP. Hồ Chí Minh", address: "Tầng 9, Tòa nhà Mplaza Saigon,\n39 Lê Duẩn, Quận 1, TP. Hồ Chí Minh", phone: "+84 888 123 456", email: "hcm@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
+                { img: "https://images.unsplash.com/photo-1546436836-07a91091f11c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng quốc tế", city: "Singapore", address: "20 Collyer Quay, #09-01\nSingapore 049319", phone: "+65 9082 1883", email: "singapore@toplifeai.com", time: "Thứ 2 - Thứ 6: 9:00 - 18:00" },
+              ].map((office, idx) => (
+                <Card key={idx} className="overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] bg-white group">
+                   <div className="relative h-[200px] w-full overflow-hidden">
+                      <Image src={office.img} alt={office.city} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <div className="absolute top-4 left-4 px-3 py-1 bg-teal-600 text-white text-[11px] font-bold rounded-[6px] uppercase tracking-wider">
+                         {office.tag}
+                      </div>
+                   </div>
+                   <CardContent className="p-8 space-y-4">
+                      <h3 className="font-bold text-[20px] text-[#1B3A6B] mb-2">{office.city}</h3>
+                      <div className="flex items-start gap-3">
+                         <MapPin className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" />
+                         <span className="text-[13px] text-slate-600 font-medium whitespace-pre-line leading-relaxed">{office.address}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                         <Phone className="w-5 h-5 text-teal-600 shrink-0" />
+                         <span className="text-[13px] text-slate-600 font-medium">{office.phone}</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                         <Mail className="w-5 h-5 text-teal-600 shrink-0" />
+                         <span className="text-[13px] text-slate-600 font-medium">{office.email}</span>
+                      </div>
+                      <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                         <Clock className="w-4 h-4 text-slate-400 shrink-0" />
+                         <span className="text-[12px] text-slate-500 font-medium">{office.time}</span>
+                      </div>
+                   </CardContent>
+                </Card>
+              ))}
+           </div>
+           
+           <Button variant="outline" className="h-[48px] rounded-[12px] border-teal-600 px-8 text-teal-600 font-bold hover:bg-teal-50 transition-colors">Xem tất cả chi nhánh</Button>
+        </div>
+      </section>
+
+      {/* FAQ & Map */}
+      <section className="py-20 bg-white">
+         <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
+            <div className="flex flex-col lg:flex-row gap-16">
+               {/* FAQ */}
+               <div className="lg:w-1/2">
+                  <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">Câu hỏi thường gặp</h2>
+                  <div className="space-y-4 border border-slate-100 rounded-[20px] p-2 bg-[#FDFDFD]">
+                     {faqs.map((faq, idx) => (
+                        <div key={idx} className="border-b border-slate-100 last:border-0">
+                           <button 
+                             className="w-full text-left px-4 py-4 flex items-center justify-between transition-colors"
+                             onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+                           >
+                              <span className="font-bold text-[15px] text-[#1B3A6B] pr-4">{faq.q}</span>
+                              <ChevronDown className={\`w-5 h-5 text-slate-400 shrink-0 transition-transform \${activeFaq === idx ? "rotate-180" : ""}\`} />
+                           </button>
+                           {activeFaq === idx && (
+                              <div className="px-4 pb-5 text-[14px] text-slate-600 font-medium leading-relaxed">
+                                 {faq.a}
+                              </div>
+                           )}
+                        </div>
+                     ))}
+                  </div>
+                  <Button variant="link" className="text-teal-600 font-bold p-0 mt-6 text-[14px]">Xem thêm câu hỏi →</Button>
+               </div>
+               
+               {/* Map Placeholder */}
+               <div className="lg:w-1/2">
+                  <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">Chúng tôi ở đây</h2>
+                  <div className="bg-slate-100 rounded-[24px] h-[400px] w-full relative overflow-hidden shadow-sm border border-slate-100 flex items-center justify-center">
+                     {/* Replace with actual embedded map or static map image */}
+                     <div className="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=21.0026,105.8058&zoom=14&size=800x400&maptype=roadmap&markers=color:teal%7C21.0026,105.8058&key=YOUR_API_KEY')] bg-cover bg-center opacity-40 grayscale contrast-125"></div>
+                     
+                     {/* Mock map popup overlay */}
+                     <div className="absolute bg-white p-5 rounded-[16px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-10 w-72 translate-x-12 -translate-y-8">
+                        <h4 className="font-bold text-[14px] text-[#1B3A6B] mb-1">ToplifeAI Headquarters</h4>
+                        <p className="text-[12px] text-slate-500 font-medium mb-3">Tầng 12, Center Building, 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</p>
+                        <a href="#" className="text-[13px] font-bold text-teal-600 flex items-center">Chỉ đường <ChevronRight className="w-3.5 h-3.5 ml-1"/></a>
+                     </div>
+                     <MapPin className="absolute w-12 h-12 text-teal-600 z-10 -translate-y-1/2" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-20 bg-white">
+         <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
+            <div className="bg-[#0F766E] rounded-[24px] p-10 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl">
+               {/* Left Content */}
+               <div className="relative z-10 space-y-6 max-w-xl text-white">
+                  <h2 className="text-[2.5rem] font-bold leading-tight">Bạn cần tư vấn chuyên sâu?</h2>
+                  <p className="text-teal-50 text-[15px] font-medium leading-relaxed">Đội ngũ bác sĩ và chuyên gia của ToplifeAI luôn sẵn sàng đồng hành cùng bạn.</p>
+                  <ul className="space-y-4 mt-6 text-[15px] text-white font-medium">
+                     <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Tư vấn 1:1 với chuyên gia</li>
+                     <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Lộ trình chăm sóc sức khỏe cá nhân hóa</li>
+                     <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Hỗ trợ trực tuyến 24/7</li>
+                  </ul>
+                  <div className="pt-6">
+                     <Button className="h-[52px] px-8 bg-white text-[#0F766E] hover:bg-slate-100 font-bold text-[15px] rounded-[12px] shadow-lg">
+                       Đặt lịch tư vấn ngay
+                     </Button>
+                  </div>
+               </div>
+               
+               {/* Right Image */}
+               <div className="relative w-full lg:w-[45%] h-[300px] lg:h-[400px] z-10 lg:absolute lg:right-0 lg:bottom-0">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0F766E] via-[#0F766E]/20 to-transparent z-10 w-[30%]"></div>
+                 <Image src="/anh1trangbacsi&chuyengia.png" alt="Doctors" fill className="object-cover lg:object-contain object-bottom lg:object-right-bottom" />
+               </div>
+            </div>
+         </div>
+      </section>
+
+    </div>
+  );
+}
+`
+
+fs.writeFileSync(file, content);
+console.log('Successfully rewrote ' + file);

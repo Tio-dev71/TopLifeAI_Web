@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: toplife_db
+    environment:
+      POSTGRES_USER: ${DB_USER:-toplife}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-toplife_password}
+      POSTGRES_DB: ${DB_NAME:-toplife_db}
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: toplife_backend
+    ports:
+      - "3001:3000"
+    environment:
+      DATABASE_URL: postgresql://${DB_USER:-toplife}:${DB_PASSWORD:-toplife_password}@postgres:5432/${DB_NAME:-toplife_db}?schema=public
+      JWT_SECRET: ${JWT_SECRET:-super-secret-key-change-me-in-production}
+      JWT_EXPIRATION: ${JWT_EXPIRATION:-7d}
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: toplife_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3001
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  pgdata:
