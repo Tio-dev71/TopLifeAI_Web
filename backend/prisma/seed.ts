@@ -109,6 +109,83 @@ async function main() {
     console.log(`Doctor created: ${doctor.email}`);
   }
 
+  // 2.5 Seed Services
+  const services = [
+    {
+      slug: 'kham-va-tu-van-chuyen-gia',
+      name: 'Khám & Tư vấn chuyên gia',
+      description: 'Đội ngũ bác sĩ hàng đầu tại ToplifeAI luôn sẵn sàng tư vấn trực tiếp và đưa ra các phác đồ điều trị tốt nhất.',
+      icon: 'Stethoscope',
+      image: 'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Chương trình khám chuyên gia tại ToplifeAI quy tụ đội ngũ y bác sĩ đầu ngành từ các bệnh viện lớn. Chúng tôi cung cấp dịch vụ thăm khám, chẩn đoán và đưa ra phác đồ điều trị cá nhân hóa cho từng bệnh nhân. Đảm bảo chất lượng và sự an tâm tuyệt đối.'
+    },
+    {
+      slug: 'xet-nghiem-gene',
+      name: 'Xét nghiệm Gene',
+      description: 'Giải mã bản đồ gen của bạn để dự đoán các rủi ro sức khỏe và cá nhân hóa lộ trình chăm sóc.',
+      icon: 'Dna',
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Công nghệ phân tích Gene tiên tiến giúp phát hiện sớm các nguy cơ bệnh lý di truyền, ung thư, và các vấn đề về chuyển hóa. Từ đó, các chuyên gia sẽ lên kế hoạch phòng ngừa và chế độ dinh dưỡng phù hợp nhất với cơ thể bạn.'
+    },
+    {
+      slug: 'ai-phan-tich-suc-khoe',
+      name: 'AI Phân tích sức khỏe',
+      description: 'Sử dụng công nghệ AI tiên tiến nhất để phân tích dữ liệu và cung cấp báo cáo sức khỏe chi tiết.',
+      icon: 'Brain',
+      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Hệ thống Trí tuệ nhân tạo (AI) độc quyền của ToplifeAI có khả năng phân tích hàng triệu điểm dữ liệu sức khỏe, hình ảnh y khoa và chỉ số sinh tồn để đưa ra cảnh báo sớm về các nguy cơ tiềm ẩn với độ chính xác cao.'
+    },
+    {
+      slug: 'tam-soat-kiem-tra',
+      name: 'Tầm soát & Kiểm tra',
+      description: 'Các gói khám tầm soát toàn diện giúp phát hiện sớm các bệnh lý nguy hiểm.',
+      icon: 'Activity',
+      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Gói tầm soát sức khỏe tổng quát và chuyên sâu đa dạng, từ cơ bản đến cao cấp, giúp bạn nắm rõ tình trạng cơ thể, phát hiện kịp thời các bất thường và có phương án can thiệp sớm nhất.'
+    },
+    {
+      slug: 'wellness-phuc-hoi',
+      name: 'Wellness & Phục hồi',
+      description: 'Chương trình chăm sóc sức khỏe chủ động, giúp cơ thể phục hồi năng lượng và sống khỏe mỗi ngày.',
+      icon: 'Sparkles',
+      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Không chỉ chữa bệnh, chúng tôi hướng tới việc xây dựng lối sống khỏe mạnh (Wellness) thông qua các liệu pháp phục hồi, dinh dưỡng cân bằng, vật lý trị liệu và các chương trình chống lão hóa tiên tiến.'
+    },
+    {
+      slug: 'cham-soc-suc-khoe-tinh-than',
+      name: 'Chăm sóc sức khỏe tinh thần',
+      description: 'Đội ngũ chuyên gia tâm lý luôn lắng nghe và đồng hành cùng bạn vượt qua mọi căng thẳng.',
+      icon: 'HeartPulse',
+      image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Sức khỏe tinh thần là nền tảng của một cuộc sống hạnh phúc. ToplifeAI cung cấp dịch vụ tham vấn và trị liệu tâm lý với các chuyên gia giàu kinh nghiệm, giúp bạn giải tỏa áp lực, điều trị trầm cảm và rối loạn lo âu.'
+    },
+    {
+      slug: 'quan-ly-thuoc-thong-minh',
+      name: 'Quản lý thuốc thông minh',
+      description: 'Hệ thống AI nhắc nhở uống thuốc và theo dõi tương tác thuốc an toàn.',
+      icon: 'Pill',
+      image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Ứng dụng tự động lập lịch uống thuốc, cảnh báo khi quên liều, và phân tích nguy cơ tương tác thuốc dựa trên đơn thuốc bạn đang dùng, đảm bảo quá trình điều trị diễn ra an toàn và hiệu quả.'
+    },
+    {
+      slug: 'tu-van-tu-xa',
+      name: 'Tư vấn từ xa (Telehealth)',
+      description: 'Kết nối trực tuyến với bác sĩ mọi lúc, mọi nơi thông qua nền tảng Video Call bảo mật.',
+      icon: 'Video',
+      image: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      content: 'Giờ đây bạn không cần phải đến tận bệnh viện. Dịch vụ Telehealth cho phép bạn đặt lịch và video call trực tiếp với bác sĩ chuyên khoa ngay tại nhà. Hỗ trợ kê đơn điện tử và giao thuốc tận nơi.'
+    },
+  ];
+
+  for (const s of services) {
+    await prisma.service.upsert({
+      where: { slug: s.slug },
+      update: s,
+      create: s,
+    });
+  }
+  console.log('Seeded Services');
+
   // 4. Seed Articles (News)
   const articlesData = [
     {

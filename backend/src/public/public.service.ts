@@ -58,4 +58,16 @@ export class PublicService {
       }
     });
   }
+
+  async getServices() {
+    return this.prisma.service.findMany({
+      orderBy: { createdAt: 'asc' },
+    });
+  }
+
+  async getServiceBySlug(slug: string) {
+    return this.prisma.service.findUnique({
+      where: { slug },
+    });
+  }
 }

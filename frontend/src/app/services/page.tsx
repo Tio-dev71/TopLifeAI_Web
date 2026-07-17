@@ -1,64 +1,46 @@
 "use client";
+import { useState, useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Stethoscope, Dna, Baby, Scissors, Syringe, Activity, Leaf, ChevronRight, Shield, Users, Clock, Globe, HeartPulse, FileText, Phone, BarChart2 } from "lucide-react";
+import { Stethoscope, Dna, Brain, Scissors, Syringe, Activity, Sparkles, ChevronRight, Shield, Users, Clock, Globe, HeartPulse, Pill, Video, FileText, Phone, BarChart2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/i18n/provider";
 
+const getIcon = (name: string) => {
+  const props = { className: "w-5 h-5 text-teal-600" };
+  switch(name) {
+    case 'Stethoscope': return <Stethoscope {...props} />;
+    case 'Dna': return <Dna {...props} />;
+    case 'Brain': return <Brain {...props} />;
+    case 'Activity': return <Activity {...props} />;
+    case 'Sparkles': return <Sparkles {...props} />;
+    case 'HeartPulse': return <HeartPulse {...props} />;
+    case 'Pill': return <Pill {...props} />;
+    case 'Video': return <Video {...props} />;
+    default: return <Stethoscope {...props} />;
+  }
+};
+
 export default function ServicesPage() {
   const { t } = useTranslation();
+  const [services, setServices] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const services = [
-    {
-      name: t("services.list.0.name"),
-      icon: <Stethoscope className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.0.desc"),
-      img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.1.name"),
-      icon: <Dna className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.1.desc"),
-      img: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.2.name"),
-      icon: <Baby className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.2.desc"),
-      img: "https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.3.name"),
-      icon: <Scissors className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.3.desc"),
-      img: "https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.4.name"),
-      icon: <Syringe className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.4.desc"),
-      img: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.5.name"),
-      icon: <Syringe className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.5.desc"),
-      img: "https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.6.name"),
-      icon: <Activity className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.6.desc"),
-      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      name: t("services.list.7.name"),
-      icon: <Leaf className="w-8 h-8 text-teal-600" />,
-      desc: t("services.list.7.desc"),
-      img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-  ];
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const res = await fetch("http://localhost:3001/public/services");
+        const data = await res.json();
+        setServices(data);
+      } catch (error) {
+        console.error("Failed to fetch services:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchServices();
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
@@ -145,19 +127,19 @@ export default function ServicesPage() {
                 <div className="p-7 flex-1 flex flex-col">
                   <div className="flex gap-4 mb-4 items-start">
                     <div className="w-[46px] h-[46px] rounded-full bg-teal-50/80 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-100 transition-colors">
-                      {service.icon}
+                      {getIcon(service.icon)}
                     </div>
                     <h3 className="font-bold text-[16px] text-[#1B3A6B] leading-snug pt-1">{service.name}</h3>
                   </div>
-                  <p className="text-[13px] text-slate-500 leading-relaxed mb-6">{service.desc}</p>
+                  <p className="text-[13px] text-slate-500 leading-relaxed mb-6">{service.description}</p>
                   <div className="mt-auto">
-                    <Button variant="link" className="text-teal-600 p-0 h-auto font-bold text-[13px] group-hover:gap-2 gap-1 transition-all flex items-center">
+                    <Link href={`/services/${service.slug}`} className="text-teal-600 font-bold text-[13px] group-hover:gap-2 gap-1 transition-all flex items-center">
                       {t("services.learnMore")} <ChevronRight className="w-[14px] h-[14px]" />
-                    </Button>
+                    </Link>
                   </div>
                 </div>
                 <div className="relative h-[180px] w-full overflow-hidden shrink-0">
-                  <Image src={service.img} alt={service.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={service.image || "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=800&q=80"} alt={service.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             ))}

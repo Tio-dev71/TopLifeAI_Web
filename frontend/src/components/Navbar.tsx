@@ -135,10 +135,11 @@ export function Navbar() {
                       <div className="grid grid-cols-2 gap-1 p-2">
                         {serviceIconKeys.map((key, idx) => {
                           const Icon = serviceIcons[idx];
+                          const slugs = ['kham-va-tu-van-chuyen-gia', 'xet-nghiem-gene', 'ai-phan-tich-suc-khoe', 'tam-soat-kiem-tra', 'wellness-phuc-hoi', 'cham-soc-suc-khoe-tinh-than', 'quan-ly-thuoc-thong-minh', 'tu-van-tu-xa'];
                           return (
                             <Link
                               key={key}
-                              href="/services"
+                              href={`/services/${slugs[idx]}`}
                               onClick={() => setServiceDropdown(false)}
                               className="flex items-start gap-3.5 p-3.5 rounded-xl hover:bg-teal-50/70 transition-colors group"
                             >
@@ -300,10 +301,11 @@ export function Navbar() {
                           <div className="pl-4 py-2 space-y-1">
                             {serviceIconKeys.map((key, idx) => {
                               const Icon = serviceIcons[idx];
+                              const slugs = ['kham-va-tu-van-chuyen-gia', 'xet-nghiem-gene', 'ai-phan-tich-suc-khoe', 'tam-soat-kiem-tra', 'wellness-phuc-hoi', 'cham-soc-suc-khoe-tinh-than', 'quan-ly-thuoc-thong-minh', 'tu-van-tu-xa'];
                               return (
                                 <Link
                                   key={key}
-                                  href="/services"
+                                  href={`/services/${slugs[idx]}`}
                                   onClick={() => { setMobileOpen(false); setMobileServiceOpen(false); }}
                                   className="flex items-center gap-3 px-4 py-2.5 text-[13px] text-slate-600 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"
                                 >
