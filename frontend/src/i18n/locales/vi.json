@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "doctors": "Bác sĩ & chuyên gia",
+    "aiTech": "Công nghệ AI",
+    "about": "Về chúng tôi",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "login": "Đăng ký / Đăng nhập",
+    "logout": "Đăng xuất",
+    "selectLang": "Chọn ngôn ngữ",
+    "language": "Ngôn ngữ",
+    "openMenu": "Mở menu điều hướng",
+    "closeMenu": "Đóng menu"
+  },
+  "serviceDropdown": {
+    "title": "Dịch vụ của ToplifeAI",
+    "viewAll": "Xem tất cả",
+    "exploreAll": "Khám phá tất cả dịch vụ y tế",
+    "items": {
+      "consult": { "name": "Khám & Tư vấn chuyên gia", "desc": "Tư vấn trực tuyến hoặc trực tiếp với bác sĩ đầu ngành" },
+      "gene": { "name": "Xét nghiệm Gene", "desc": "Phân tích gene và y học chính xác cá nhân hóa" },
+      "ai": { "name": "AI Phân tích sức khỏe", "desc": "Dự đoán rủi ro và tối ưu hóa sức khỏe bằng AI" },
+      "screening": { "name": "Tầm soát & Kiểm tra", "desc": "Gói kiểm tra sức khỏe tổng quát, tầm soát ung thư" },
+      "wellness": { "name": "Wellness & Phục hồi", "desc": "Chương trình phục hồi chức năng và chăm sóc toàn diện" },
+      "mental": { "name": "Chăm sóc sức khỏe tinh thần", "desc": "Tâm lý trị liệu và quản lý stress chuyên sâu" },
+      "medicine": { "name": "Quản lý thuốc thông minh", "desc": "Theo dõi đơn thuốc, nhắc nhở và tương tác thuốc" },
+      "telehealth": { "name": "Tư vấn từ xa (Telehealth)", "desc": "Video call chất lượng cao với bác sĩ mọi lúc" }
+    }
+  },
+  "hero": {
+    "line1": "Sức khỏe của bạn.",
+    "line2": "Dữ liệu của bạn.",
+    "line3": "Tương lai của bạn.",
+    "desc": "ToplifeAI ứng dụng trí tuệ nhân tạo và y học chính xác để cá nhân hóa hành trình chăm sóc sức khỏe toàn diện cho bạn.",
+    "cta1": "Khám phá dịch vụ",
+    "cta2": "Xem video giới thiệu"
+  },
+  "servicesBar": {
+    "gene": { "title": "Xét nghiệm Gene", "desc": "Hiểu cơ địa, phòng ngừa và cá nhân hóa sức khỏe" },
+    "aiHealth": { "title": "AI Health Assistant", "desc": "Trợ lý AI 24/7 theo dõi và đồng hành cùng bạn" },
+    "records": { "title": "Hồ sơ sức khỏe số", "desc": "Lưu trữ thông tin y tế an toàn, kết nối mọi lúc mọi nơi" },
+    "doctors": { "title": "Bác sĩ & Chuyên gia", "desc": "Đặt lịch tư vấn với các bác sĩ đầu ngành" },
+    "international": { "title": "International Patients", "desc": "Hỗ trợ người nước ngoài & Việt kiều khám chữa bệnh tại VN" },
+    "wellness": { "title": "Wellness & Longevity", "desc": "Chương trình chăm sóc sức khỏe chủ động và trường thọ" }
+  },
+  "solutions": {
+    "heading": "Giải pháp sức khỏe",
+    "headingHighlight": "toàn diện",
+    "headingSuffix": "cho bạn và gia đình",
+    "viewAllServices": "Xem tất cả dịch vụ",
+    "cards": {
+      "gene": { "title": "Gene & Precision Health", "desc": "Giải mã gen – Hiểu cơ thể – Phòng ngừa bệnh tật" },
+      "ai": { "title": "AI Health & Tracking", "desc": "Theo dõi sức khỏe, nhận cảnh báo sớm và gợi ý cá nhân hóa" },
+      "medical": { "title": "Medical Consultation", "desc": "Tư vấn trực tuyến hoặc trực tiếp với chuyên gia hàng đầu" },
+      "wellness": { "title": "Wellness & Longevity", "desc": "Dinh dưỡng, vận động, giấc ngủ và thói quen sống lành mạnh" }
+    },
+    "international": {
+      "title": "Dành cho bệnh nhân quốc tế",
+      "desc": "ToplifeAI đồng hành cùng bạn trong hành trình khám và điều trị tại Việt Nam",
+      "feature1": "Tư vấn & hội chẩn từ xa",
+      "feature1Desc": "Đội ngũ bác sĩ chuyên môn cao",
+      "feature2": "Lịch trình điều trị cá nhân hóa",
+      "feature2Desc": "Phù hợp với tình trạng của bạn",
+      "feature3": "Hỗ trợ toàn diện",
+      "feature3Desc": "Visa y tế, đưa đón, phiên dịch, lưu trú",
+      "feature4": "Chăm sóc sau điều trị",
+      "feature4Desc": "Theo dõi và tư vấn sau khi về nước",
+      "learnMore": "Tìm hiểu thêm"
+    }
+  },
+  "trust": {
+    "heading": "Được tin tưởng bởi hàng triệu người dùng\nvà đối tác y tế hàng đầu",
+    "users": "Người dùng tin tưởng",
+    "experts": "Bác sĩ & chuyên gia",
+    "hospitals": "Bệnh viện & phòng khám\nđối tác",
+    "countries": "Quốc gia phục vụ",
+    "viewPartners": "Xem tất cả đối tác"
+  },
+  "footer": {
+    "desc": "ToplifeAI ứng dụng trí tuệ nhân tạo và y học chính xác để cá nhân hóa hành trình chăm sóc sức khỏe toàn diện cho bạn.",
+    "services": "Dịch vụ",
+    "serviceConsult": "Khám & Tư vấn chuyên gia",
+    "serviceGene": "Xét nghiệm Gene",
+    "servicePediatrics": "Nhi khoa quốc tế",
+    "serviceBeauty": "Thẩm mỹ & Làm đẹp",
+    "serviceScreening": "Tầm soát sức khỏe",
+    "serviceWellness": "Wellness & Longevity",
+    "company": "Công ty",
+    "aboutUs": "Về chúng tôi",
+    "doctorTeam": "Đội ngũ bác sĩ",
+    "aiTech": "Công nghệ AI",
+    "newsBlog": "Tin tức & Blog",
+    "intPatients": "Bệnh nhân quốc tế",
+    "careers": "Tuyển dụng",
+    "contactTitle": "Liên hệ",
+    "support247": "Hỗ trợ 24/7",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng",
+    "cookies": "Chính sách Cookie"
+  }
+}

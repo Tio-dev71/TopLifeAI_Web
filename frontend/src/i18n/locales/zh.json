@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "doctors": "医生与专家",
+    "aiTech": "AI技术",
+    "about": "关于我们",
+    "news": "新闻",
+    "contact": "联系我们",
+    "login": "注册 / 登录",
+    "logout": "退出登录",
+    "selectLang": "选择语言",
+    "language": "语言",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "serviceDropdown": {
+    "title": "ToplifeAI 服务",
+    "viewAll": "查看全部",
+    "exploreAll": "探索所有医疗服务",
+    "items": {
+      "consult": { "name": "专家问诊", "desc": "与顶级专家在线或面对面咨询" },
+      "gene": { "name": "基因检测", "desc": "通过基因分析实现个性化精准医疗" },
+      "ai": { "name": "AI健康分析", "desc": "基于AI的风险预测与健康优化" },
+      "screening": { "name": "健康体检", "desc": "综合健康检查与癌症筛查项目" },
+      "wellness": { "name": "康复与养生", "desc": "康复项目与综合健康护理" },
+      "mental": { "name": "心理健康管理", "desc": "心理治疗与高级压力管理" },
+      "medicine": { "name": "智能用药管理", "desc": "处方追踪、提醒与药物相互作用管理" },
+      "telehealth": { "name": "远程医疗", "desc": "随时与医生进行高质量视频问诊" }
+    }
+  },
+  "hero": {
+    "line1": "您的健康。",
+    "line2": "您的数据。",
+    "line3": "您的未来。",
+    "desc": "ToplifeAI运用人工智能和精准医学，为您打造个性化的综合健康管理服务。",
+    "cta1": "探索服务",
+    "cta2": "观看介绍视频"
+  },
+  "servicesBar": {
+    "gene": { "title": "基因检测", "desc": "了解体质、预防疾病、个性化健康管理" },
+    "aiHealth": { "title": "AI健康助手", "desc": "24小时AI助手全程监测健康" },
+    "records": { "title": "数字健康档案", "desc": "安全的医疗信息存储，随时随地可访问" },
+    "doctors": { "title": "医生与专家", "desc": "预约顶级医疗专家咨询" },
+    "international": { "title": "国际患者", "desc": "为来越就医的国际患者提供支持" },
+    "wellness": { "title": "养生与长寿", "desc": "主动健康管理与长寿项目" }
+  },
+  "solutions": {
+    "heading": "全面的健康",
+    "headingHighlight": "解决方案",
+    "headingSuffix": "为您和家人",
+    "viewAllServices": "查看所有服务",
+    "cards": {
+      "gene": { "title": "基因与精准健康", "desc": "基因解码 – 了解身体 – 预防疾病" },
+      "ai": { "title": "AI健康与追踪", "desc": "健康监测、早期预警、个性化建议" },
+      "medical": { "title": "医疗咨询", "desc": "与顶级专家在线或面对面咨询" },
+      "wellness": { "title": "养生与长寿", "desc": "营养、运动、睡眠与健康生活习惯" }
+    },
+    "international": {
+      "title": "国际患者专属服务",
+      "desc": "ToplifeAI陪伴您在越南的医疗之旅",
+      "feature1": "远程会诊",
+      "feature1Desc": "高水平医疗团队",
+      "feature2": "个性化治疗方案",
+      "feature2Desc": "根据您的状况量身定制",
+      "feature3": "全面支持",
+      "feature3Desc": "医疗签证、接送、翻译、住宿",
+      "feature4": "治疗后关怀",
+      "feature4Desc": "回国后跟踪咨询",
+      "learnMore": "了解更多"
+    }
+  },
+  "trust": {
+    "heading": "受到数百万用户和\n顶级医疗合作伙伴的信赖",
+    "users": "信赖的用户",
+    "experts": "医生与专家",
+    "hospitals": "合作医院\n与诊所",
+    "countries": "服务国家",
+    "viewPartners": "查看所有合作伙伴"
+  },
+  "footer": {
+    "desc": "ToplifeAI运用人工智能和精准医学，为您打造个性化的综合健康管理服务。",
+    "services": "服务",
+    "serviceConsult": "专家问诊",
+    "serviceGene": "基因检测",
+    "servicePediatrics": "国际儿科",
+    "serviceBeauty": "医美与美容",
+    "serviceScreening": "健康体检",
+    "serviceWellness": "养生与长寿",
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "doctorTeam": "医疗团队",
+    "aiTech": "AI技术",
+    "newsBlog": "新闻与博客",
+    "intPatients": "国际患者",
+    "careers": "招聘",
+    "contactTitle": "联系我们",
+    "support247": "24小时支持",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie政策"
+  }
+}

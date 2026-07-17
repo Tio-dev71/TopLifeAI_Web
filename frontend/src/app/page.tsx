@@ -5,8 +5,11 @@ import { motion } from "framer-motion";
 import { HeartPulse, Shield, Activity, Users, Dna, FileText, Globe, Leaf, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "@/i18n/provider";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -42,17 +45,16 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-[2rem] lg:text-[3rem] font-bold tracking-tight text-slate-800 leading-[1.05]">
-                Sức khỏe của bạn.<br />
-                Dữ liệu của bạn.<br />
-                <span className="text-teal-600">Tương lai của bạn.</span>
+                {t("hero.line1")}<br />
+                {t("hero.line2")}<br />
+                <span className="text-teal-600">{t("hero.line3")}</span>
               </h1>
               <p className="text-md lg:text-l text-slate-600 max-w-[480px] leading-relaxed">
-                ToplifeAI ứng dụng trí tuệ nhân tạo và y học chính xác
-                để cá nhân hóa hành trình chăm sóc sức khỏe toàn diện cho bạn.
+                {t("hero.desc")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button size="lg" className="h-[56px] px-8 text-[17px] font-bold rounded-xl bg-teal-600 hover:bg-teal-700 shadow-xl shadow-teal-600/20">
-                  Khám phá dịch vụ
+                  {t("hero.cta1")}
                 </Button>
                 <Button size="lg" variant="outline" className="h-[56px] px-8 text-[17px] font-bold rounded-xl text-teal-600 border-teal-200 hover:bg-teal-50 bg-white">
                   <span className="flex items-center gap-2">
@@ -60,7 +62,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    Xem video giới thiệu
+                    {t("hero.cta2")}
                   </span>
                 </Button>
               </div>
@@ -75,19 +77,19 @@ export default function Home() {
           <div className="bg-white rounded-[24px] shadow-[0_12px_40px_rgb(0,0,0,0.06)] border border-slate-100 py-10 px-6 lg:px-12">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
               {[
-                { icon: <Dna className="w-[26px] h-[26px] text-teal-600" />, title: "Xét nghiệm Gene", desc: "Hiểu cơ địa, phòng ngừa và cá nhân hóa sức khỏe" },
-                { icon: <HeartPulse className="w-[26px] h-[26px] text-teal-600" />, title: "AI Health Assistant", desc: "Trợ lý AI 24/7 theo dõi và đồng hành cùng bạn" },
-                { icon: <FileText className="w-[26px] h-[26px] text-teal-600" />, title: "Hồ sơ sức khỏe số", desc: "Lưu trữ thông tin y tế an toàn, kết nối mọi lúc mọi nơi" },
-                { icon: <Users className="w-[26px] h-[26px] text-teal-600" />, title: "Bác sĩ & Chuyên gia", desc: "Đặt lịch tư vấn với các bác sĩ đầu ngành" },
-                { icon: <Globe className="w-[26px] h-[26px] text-teal-600" />, title: "International Patients", desc: "Hỗ trợ người nước ngoài & Việt kiều khám chữa bệnh tại VN" },
-                { icon: <Leaf className="w-[26px] h-[26px] text-teal-600" />, title: "Wellness & Longevity", desc: "Chương trình chăm sóc sức khỏe chủ động và trường thọ" },
+                { icon: <Dna className="w-[26px] h-[26px] text-teal-600" />, key: "gene" },
+                { icon: <HeartPulse className="w-[26px] h-[26px] text-teal-600" />, key: "aiHealth" },
+                { icon: <FileText className="w-[26px] h-[26px] text-teal-600" />, key: "records" },
+                { icon: <Users className="w-[26px] h-[26px] text-teal-600" />, key: "doctors" },
+                { icon: <Globe className="w-[26px] h-[26px] text-teal-600" />, key: "international" },
+                { icon: <Leaf className="w-[26px] h-[26px] text-teal-600" />, key: "wellness" },
               ].map((item, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center px-2 lg:px-6">
                   <div className="w-[60px] h-[60px] bg-teal-50/80 rounded-full flex items-center justify-center mb-5 transition-transform hover:scale-110 hover:bg-teal-100">
                     {item.icon}
                   </div>
-                  <h3 className="text-[16px] font-bold text-slate-800 mb-2">{item.title}</h3>
-                  <p className="text-[13px] text-slate-500 leading-relaxed max-w-[180px]">{item.desc}</p>
+                  <h3 className="text-[16px] font-bold text-slate-800 mb-2">{t(`servicesBar.${item.key}.title`)}</h3>
+                  <p className="text-[13px] text-slate-500 leading-relaxed max-w-[180px]">{t(`servicesBar.${item.key}.desc`)}</p>
                 </div>
               ))}
             </div>
@@ -104,25 +106,25 @@ export default function Home() {
             <div className="flex-1">
               <motion.div {...fadeIn}>
                 <h2 className="text-[1rem] lg:text-[1.5rem] font-bold mb-10 text-slate-800">
-                  Giải pháp sức khỏe <span className="text-teal-600">toàn diện</span> cho bạn và gia đình
+                  {t("solutions.heading")} <span className="text-teal-600">{t("solutions.headingHighlight")}</span> {t("solutions.headingSuffix")}
                 </h2>
               </motion.div>
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { img: "/anh1trangdichvu.png", title: "Gene & Precision Health", desc: "Giải mã gen – Hiểu cơ thể – Phòng ngừa bệnh tật" },
-                  { img: "/anh1trangcongngheAI.png", title: "AI Health & Tracking", desc: "Theo dõi sức khỏe, nhận cảnh báo sớm và gợi ý cá nhân hóa" },
-                  { img: "/anh1trangbacsi&chuyengia.png", title: "Medical Consultation", desc: "Tư vấn trực tuyến hoặc trực tiếp với chuyên gia hàng đầu" },
-                  { img: "/anh1tranglienhe.png", title: "Wellness & Longevity", desc: "Dinh dưỡng, vận động, giấc ngủ và thói quen sống lành mạnh" },
+                  { img: "/anh1trangdichvu.png", key: "gene" },
+                  { img: "/anh1trangcongngheAI.png", key: "ai" },
+                  { img: "/anh1trangbacsi&chuyengia.png", key: "medical" },
+                  { img: "/anh1tranglienhe.png", key: "wellness" },
                 ].map((item, idx) => (
                   <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}>
                     <div className="group cursor-pointer flex flex-col h-full">
                       <div className="relative h-[160px] lg:h-[180px] w-full overflow-hidden rounded-[20px] mb-4 shrink-0">
-                        <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <Image src={item.img} alt={item.key} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                       </div>
                       <div className="flex-1 flex flex-col">
-                        <h3 className="font-bold text-[15px] lg:text-[16px] mb-2 group-hover:text-teal-600 transition-colors text-slate-800 leading-tight">{item.title}</h3>
-                        <p className="text-[12px] lg:text-[13px] text-slate-500 leading-relaxed mt-auto pr-2">{item.desc}</p>
+                        <h3 className="font-bold text-[15px] lg:text-[16px] mb-2 group-hover:text-teal-600 transition-colors text-slate-800 leading-tight">{t(`solutions.cards.${item.key}.title`)}</h3>
+                        <p className="text-[12px] lg:text-[13px] text-slate-500 leading-relaxed mt-auto pr-2">{t(`solutions.cards.${item.key}.desc`)}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -130,7 +132,7 @@ export default function Home() {
               </div>
               <div className="mt-8 text-center">
                 <Button variant="outline" className="h-[48px] px-8 rounded-[10px] border-teal-600 text-teal-600 font-bold hover:bg-teal-50 hover:text-teal-700 hover:border-teal-700">
-                  Xem tất cả dịch vụ
+                  {t("solutions.viewAllServices")}
                 </Button>
               </div>
             </div>
@@ -150,8 +152,8 @@ export default function Home() {
                 </div>
 
                 <div className="p-8 lg:p-10 flex-1 z-20 relative w-full lg:w-[60%] flex flex-col justify-center">
-                  <h2 className="text-[1.5rem] lg:text-[1.75rem] font-bold text-[#1B3A6B] mb-2 leading-tight">Dành cho bệnh nhân quốc tế</h2>
-                  <p className="text-[14px] text-slate-700 mb-8 max-w-[280px] leading-relaxed">ToplifeAI đồng hành cùng bạn trong hành trình khám và điều trị tại Việt Nam</p>
+                  <h2 className="text-[1.5rem] lg:text-[1.75rem] font-bold text-[#1B3A6B] mb-2 leading-tight">{t("solutions.international.title")}</h2>
+                  <p className="text-[14px] text-slate-700 mb-8 max-w-[280px] leading-relaxed">{t("solutions.international.desc")}</p>
 
                   <ul className="space-y-5">
                     <li className="flex items-start gap-4">
@@ -159,8 +161,8 @@ export default function Home() {
                         <Shield className="w-[18px] h-[18px]" />
                       </div>
                       <div className="pt-0.5">
-                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">Tư vấn & hội chẩn từ xa</span>
-                        <span className="text-[13px] text-slate-500 block leading-tight">Đội ngũ bác sĩ chuyên môn cao</span>
+                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">{t("solutions.international.feature1")}</span>
+                        <span className="text-[13px] text-slate-500 block leading-tight">{t("solutions.international.feature1Desc")}</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -168,8 +170,8 @@ export default function Home() {
                         <Activity className="w-[18px] h-[18px]" />
                       </div>
                       <div className="pt-0.5">
-                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">Lịch trình điều trị cá nhân hóa</span>
-                        <span className="text-[13px] text-slate-500 block leading-tight">Phù hợp với tình trạng của bạn</span>
+                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">{t("solutions.international.feature2")}</span>
+                        <span className="text-[13px] text-slate-500 block leading-tight">{t("solutions.international.feature2Desc")}</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -177,8 +179,8 @@ export default function Home() {
                         <Users className="w-[18px] h-[18px]" />
                       </div>
                       <div className="pt-0.5">
-                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">Hỗ trợ toàn diện</span>
-                        <span className="text-[13px] text-slate-500 block leading-tight">Visa y tế, đưa đón, phiên dịch, lưu trú</span>
+                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">{t("solutions.international.feature3")}</span>
+                        <span className="text-[13px] text-slate-500 block leading-tight">{t("solutions.international.feature3Desc")}</span>
                       </div>
                     </li>
                     <li className="flex items-start gap-4">
@@ -186,13 +188,13 @@ export default function Home() {
                         <Heart className="w-[18px] h-[18px]" />
                       </div>
                       <div className="pt-0.5">
-                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">Chăm sóc sau điều trị</span>
-                        <span className="text-[13px] text-slate-500 block leading-tight">Theo dõi và tư vấn sau khi về nước</span>
+                        <span className="text-[14px] font-bold text-[#1B3A6B] block leading-tight mb-1">{t("solutions.international.feature4")}</span>
+                        <span className="text-[13px] text-slate-500 block leading-tight">{t("solutions.international.feature4Desc")}</span>
                       </div>
                     </li>
                   </ul>
                   <Button className="mt-10 bg-[#164482] hover:bg-[#103463] text-white font-bold rounded-xl px-8 h-[48px] text-[14px] shadow-lg shadow-[#164482]/20 relative z-10">
-                    Tìm hiểu thêm
+                    {t("solutions.international.learnMore")}
                   </Button>
                 </div>
               </div>
@@ -207,25 +209,27 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 pt-8 border-t border-slate-100">
             {/* Left: Trust text + stats */}
             <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-14">
-              <div className="max-w-[180px]">
-                <p className="text-[15px] font-bold text-slate-800 leading-snug">Được tin tưởng bởi hàng triệu người dùng<br />và đối tác y tế hàng đầu</p>
+              <div className="max-w-[200px]">
+                <p className="text-[15px] font-bold text-slate-800 leading-snug whitespace-pre-line">
+                  {t("trust.heading")}
+                </p>
               </div>
               <div className="flex flex-wrap gap-8 lg:gap-14 text-left">
                 <div>
                   <div className="text-[2.25rem] font-bold text-teal-600 leading-none mb-2">1M+</div>
-                  <div className="text-[13px] text-slate-500 font-semibold">Người dùng tin tưởng</div>
+                  <div className="text-[13px] text-slate-500 font-semibold">{t("trust.users")}</div>
                 </div>
                 <div>
                   <div className="text-[2.25rem] font-bold text-teal-600 leading-none mb-2">500+</div>
-                  <div className="text-[13px] text-slate-500 font-semibold">Bác sĩ & chuyên gia</div>
+                  <div className="text-[13px] text-slate-500 font-semibold">{t("trust.experts")}</div>
                 </div>
                 <div>
                   <div className="text-[2.25rem] font-bold text-teal-600 leading-none mb-2">100+</div>
-                  <div className="text-[13px] text-slate-500 font-semibold">Bệnh viện & phòng khám<br />đối tác</div>
+                  <div className="text-[13px] text-slate-500 font-semibold whitespace-pre-line">{t("trust.hospitals")}</div>
                 </div>
                 <div>
                   <div className="text-[2.25rem] font-bold text-teal-600 leading-none mb-2">10+</div>
-                  <div className="text-[13px] text-slate-500 font-semibold">Quốc gia phục vụ</div>
+                  <div className="text-[13px] text-slate-500 font-semibold">{t("trust.countries")}</div>
                 </div>
               </div>
             </div>
@@ -250,7 +254,7 @@ export default function Home() {
                 <span className="font-bold text-[20px] text-teal-700">NHT</span>
               </div>
               <Link href="/services" className="text-[14px] text-teal-600 font-bold border-2 border-teal-200 rounded-[10px] px-6 py-3 hover:bg-teal-50 transition-colors whitespace-nowrap ml-4">
-                Xem tất cả đối tác
+                {t("trust.viewPartners")}
               </Link>
             </div>
           </div>

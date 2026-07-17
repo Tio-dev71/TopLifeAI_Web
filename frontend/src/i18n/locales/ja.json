@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "doctors": "医師・専門家",
+    "aiTech": "AI技術",
+    "about": "会社概要",
+    "news": "ニュース",
+    "contact": "お問い合わせ",
+    "login": "会員登録 / ログイン",
+    "logout": "ログアウト",
+    "selectLang": "言語を選択",
+    "language": "言語",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
+  },
+  "serviceDropdown": {
+    "title": "ToplifeAI サービス",
+    "viewAll": "すべて見る",
+    "exploreAll": "すべての医療サービスを探す",
+    "items": {
+      "consult": { "name": "専門家相談", "desc": "トップ専門医とのオンラインまたは対面相談" },
+      "gene": { "name": "遺伝子検査", "desc": "遺伝子分析によるパーソナライズド精密医療" },
+      "ai": { "name": "AI健康分析", "desc": "AIによるリスク予測と健康最適化" },
+      "screening": { "name": "健康診断", "desc": "総合健康診断およびがん検診プログラム" },
+      "wellness": { "name": "ウェルネス＆リカバリー", "desc": "リハビリテーションと包括的ケアプログラム" },
+      "mental": { "name": "メンタルヘルスケア", "desc": "心理療法と高度なストレス管理" },
+      "medicine": { "name": "スマート服薬管理", "desc": "処方追跡、リマインダー、薬物相互作用管理" },
+      "telehealth": { "name": "遠隔医療", "desc": "いつでも医師と高品質なビデオ通話" }
+    }
+  },
+  "hero": {
+    "line1": "あなたの健康。",
+    "line2": "あなたのデータ。",
+    "line3": "あなたの未来。",
+    "desc": "ToplifeAIは人工知能と精密医療を活用し、パーソナライズされた包括的なヘルスケアを提供します。",
+    "cta1": "サービスを探す",
+    "cta2": "紹介動画を見る"
+  },
+  "servicesBar": {
+    "gene": { "title": "遺伝子検査", "desc": "体質理解、疾病予防、パーソナライズドヘルスケア" },
+    "aiHealth": { "title": "AIヘルスアシスタント", "desc": "24時間AIアシスタントが健康をモニタリング" },
+    "records": { "title": "デジタル健康記録", "desc": "安全な医療情報保存、いつでもどこでもアクセス" },
+    "doctors": { "title": "医師・専門家", "desc": "トップ医療専門家との相談予約" },
+    "international": { "title": "国際患者", "desc": "ベトナムでの治療を希望する国際患者サポート" },
+    "wellness": { "title": "ウェルネス＆長寿", "desc": "プロアクティブなヘルスケアと長寿プログラム" }
+  },
+  "solutions": {
+    "heading": "包括的な健康",
+    "headingHighlight": "ソリューション",
+    "headingSuffix": "あなたとご家族のための",
+    "viewAllServices": "すべてのサービスを見る",
+    "cards": {
+      "gene": { "title": "遺伝子＆精密医療", "desc": "遺伝子解読 – 体を理解 – 疾病予防" },
+      "ai": { "title": "AIヘルス＆トラッキング", "desc": "健康モニタリング、早期警報、パーソナライズ提案" },
+      "medical": { "title": "医療相談", "desc": "トップ専門家とのオンラインまたは対面相談" },
+      "wellness": { "title": "ウェルネス＆長寿", "desc": "栄養、運動、睡眠、健康的な生活習慣" }
+    },
+    "international": {
+      "title": "国際患者向けサービス",
+      "desc": "ToplifeAIがベトナムでの医療の旅をサポートします",
+      "feature1": "遠隔相談",
+      "feature1Desc": "高度な医療チーム",
+      "feature2": "カスタマイズ治療計画",
+      "feature2Desc": "症状に合わせた設計",
+      "feature3": "包括的サポート",
+      "feature3Desc": "医療ビザ、送迎、通訳、宿泊",
+      "feature4": "治療後ケア",
+      "feature4Desc": "帰国後のフォローアップ相談",
+      "learnMore": "詳しく見る"
+    }
+  },
+  "trust": {
+    "heading": "数百万のユーザーと\n主要医療パートナーの信頼",
+    "users": "信頼するユーザー",
+    "experts": "医師・専門家",
+    "hospitals": "パートナー病院\n＆クリニック",
+    "countries": "サービス提供国",
+    "viewPartners": "すべてのパートナーを見る"
+  },
+  "footer": {
+    "desc": "ToplifeAIは人工知能と精密医療を活用し、パーソナライズされた包括的なヘルスケアを提供します。",
+    "services": "サービス",
+    "serviceConsult": "専門家相談",
+    "serviceGene": "遺伝子検査",
+    "servicePediatrics": "国際小児科",
+    "serviceBeauty": "美容＆ビューティー",
+    "serviceScreening": "健康診断",
+    "serviceWellness": "ウェルネス＆長寿",
+    "company": "会社",
+    "aboutUs": "会社概要",
+    "doctorTeam": "医療チーム",
+    "aiTech": "AI技術",
+    "newsBlog": "ニュース＆ブログ",
+    "intPatients": "国際患者",
+    "careers": "採用情報",
+    "contactTitle": "お問い合わせ",
+    "support247": "24時間サポート",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "cookies": "Cookieポリシー"
+  }
+}

@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslation } from "@/i18n/provider";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-slate-900 text-slate-300">
       {/* Main Footer */}
@@ -14,8 +19,7 @@ export function Footer() {
               <Image src="/ToplifeAI-White-Logo.png" alt="ToplifeAI Logo" width={400} height={120} className="w-auto h-20 scale-[1.2] lg:scale-[2.0] lg:h-32 object-contain" priority />
             </Link>
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
-              ToplifeAI ứng dụng trí tuệ nhân tạo và y học chính xác để cá nhân
-              hóa hành trình chăm sóc sức khỏe toàn diện cho bạn.
+              {t("footer.desc")}
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -45,44 +49,44 @@ export function Footer() {
           {/* Dịch vụ */}
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
-              Dịch vụ
+              {t("footer.services")}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Khám & Tư vấn chuyên gia</Link></li>
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Xét nghiệm Gene</Link></li>
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Nhi khoa quốc tế</Link></li>
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Thẩm mỹ & Làm đẹp</Link></li>
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Tầm soát sức khỏe</Link></li>
-              <li><Link href="/services" className="hover:text-teal-400 transition-colors">Wellness & Longevity</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.serviceConsult")}</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.serviceGene")}</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.servicePediatrics")}</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.serviceBeauty")}</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.serviceScreening")}</Link></li>
+              <li><Link href="/services" className="hover:text-teal-400 transition-colors">{t("footer.serviceWellness")}</Link></li>
             </ul>
           </div>
 
           {/* Công ty */}
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
-              Công ty
+              {t("footer.company")}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="hover:text-teal-400 transition-colors">Về chúng tôi</Link></li>
-              <li><Link href="/doctors" className="hover:text-teal-400 transition-colors">Đội ngũ bác sĩ</Link></li>
-              <li><Link href="/ai-technology" className="hover:text-teal-400 transition-colors">Công nghệ AI</Link></li>
-              <li><Link href="/news" className="hover:text-teal-400 transition-colors">Tin tức & Blog</Link></li>
-              <li><Link href="/international" className="hover:text-teal-400 transition-colors">Bệnh nhân quốc tế</Link></li>
-              <li><Link href="#" className="hover:text-teal-400 transition-colors">Tuyển dụng</Link></li>
+              <li><Link href="/about" className="hover:text-teal-400 transition-colors">{t("footer.aboutUs")}</Link></li>
+              <li><Link href="/doctors" className="hover:text-teal-400 transition-colors">{t("footer.doctorTeam")}</Link></li>
+              <li><Link href="/ai-technology" className="hover:text-teal-400 transition-colors">{t("footer.aiTech")}</Link></li>
+              <li><Link href="/news" className="hover:text-teal-400 transition-colors">{t("footer.newsBlog")}</Link></li>
+              <li><Link href="/international" className="hover:text-teal-400 transition-colors">{t("footer.intPatients")}</Link></li>
+              <li><Link href="#" className="hover:text-teal-400 transition-colors">{t("footer.careers")}</Link></li>
             </ul>
           </div>
 
           {/* Liên hệ */}
           <div>
             <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
-              Liên hệ
+              {t("footer.contactTitle")}
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 mt-0.5 text-teal-400 shrink-0" />
                 <div>
                   <p className="text-white font-medium">+84 888 123 456</p>
-                  <p className="text-slate-500 text-xs">Hỗ trợ 24/7</p>
+                  <p className="text-slate-500 text-xs">{t("footer.support247")}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -105,9 +109,9 @@ export function Footer() {
             © {new Date().getFullYear()} ToplifeAI. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-slate-500">
-            <Link href="#" className="hover:text-teal-400 transition-colors">Chính sách bảo mật</Link>
-            <Link href="#" className="hover:text-teal-400 transition-colors">Điều khoản sử dụng</Link>
-            <Link href="#" className="hover:text-teal-400 transition-colors">Chính sách Cookie</Link>
+            <Link href="#" className="hover:text-teal-400 transition-colors">{t("footer.privacy")}</Link>
+            <Link href="#" className="hover:text-teal-400 transition-colors">{t("footer.terms")}</Link>
+            <Link href="#" className="hover:text-teal-400 transition-colors">{t("footer.cookies")}</Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "홈",
+    "services": "서비스",
+    "doctors": "의사 & 전문가",
+    "aiTech": "AI 기술",
+    "about": "회사 소개",
+    "news": "뉴스",
+    "contact": "문의",
+    "login": "회원가입 / 로그인",
+    "logout": "로그아웃",
+    "selectLang": "언어 선택",
+    "language": "언어",
+    "openMenu": "메뉴 열기",
+    "closeMenu": "메뉴 닫기"
+  },
+  "serviceDropdown": {
+    "title": "ToplifeAI 서비스",
+    "viewAll": "전체 보기",
+    "exploreAll": "모든 의료 서비스 탐색",
+    "items": {
+      "consult": { "name": "전문 상담", "desc": "최고 전문의와 온라인 또는 대면 상담" },
+      "gene": { "name": "유전자 검사", "desc": "유전자 분석을 통한 맞춤형 정밀 의학" },
+      "ai": { "name": "AI 건강 분석", "desc": "AI 기반 위험 예측 및 건강 최적화" },
+      "screening": { "name": "건강 검진", "desc": "종합 건강검진 및 암 검진 프로그램" },
+      "wellness": { "name": "웰니스 & 회복", "desc": "재활 프로그램 및 통합 케어" },
+      "mental": { "name": "정신 건강 관리", "desc": "심리 치료 및 스트레스 전문 관리" },
+      "medicine": { "name": "스마트 약물 관리", "desc": "처방 추적, 알림 및 약물 상호작용 관리" },
+      "telehealth": { "name": "원격 의료", "desc": "언제든지 의사와 고품질 화상 통화" }
+    }
+  },
+  "hero": {
+    "line1": "당신의 건강.",
+    "line2": "당신의 데이터.",
+    "line3": "당신의 미래.",
+    "desc": "ToplifeAI는 인공지능과 정밀 의학을 활용하여 맞춤형 종합 건강 관리 서비스를 제공합니다.",
+    "cta1": "서비스 살펴보기",
+    "cta2": "소개 영상 보기"
+  },
+  "servicesBar": {
+    "gene": { "title": "유전자 검사", "desc": "체질 이해, 질병 예방 및 맞춤형 건강 관리" },
+    "aiHealth": { "title": "AI 건강 어시스턴트", "desc": "24시간 AI 어시스턴트가 건강을 모니터링" },
+    "records": { "title": "디지털 건강 기록", "desc": "안전한 의료 정보 저장, 언제 어디서나 접근 가능" },
+    "doctors": { "title": "의사 & 전문가", "desc": "최고의 의료 전문가와 상담 예약" },
+    "international": { "title": "국제 환자", "desc": "베트남에서 치료를 원하는 국제 환자 지원" },
+    "wellness": { "title": "웰니스 & 장수", "desc": "주도적 건강 관리 및 장수 프로그램" }
+  },
+  "solutions": {
+    "heading": "종합 건강",
+    "headingHighlight": "솔루션",
+    "headingSuffix": "당신과 가족을 위한",
+    "viewAllServices": "모든 서비스 보기",
+    "cards": {
+      "gene": { "title": "유전자 & 정밀 건강", "desc": "유전자 해독 – 신체 이해 – 질병 예방" },
+      "ai": { "title": "AI 건강 & 추적", "desc": "건강 모니터링, 조기 경보, 맞춤 추천" },
+      "medical": { "title": "의료 상담", "desc": "최고 전문가와 온라인 또는 대면 상담" },
+      "wellness": { "title": "웰니스 & 장수", "desc": "영양, 운동, 수면, 건강한 생활 습관" }
+    },
+    "international": {
+      "title": "국제 환자를 위한 서비스",
+      "desc": "ToplifeAI가 베트남 의료 여정을 함께합니다",
+      "feature1": "원격 상담",
+      "feature1Desc": "고급 의료팀",
+      "feature2": "맞춤형 치료 계획",
+      "feature2Desc": "상태에 맞춤 설계",
+      "feature3": "종합 지원",
+      "feature3Desc": "의료 비자, 교통, 통역, 숙박",
+      "feature4": "치료 후 관리",
+      "feature4Desc": "귀국 후 추적 상담",
+      "learnMore": "자세히 알아보기"
+    }
+  },
+  "trust": {
+    "heading": "수백만 사용자와\n주요 의료 파트너의 신뢰",
+    "users": "신뢰하는 사용자",
+    "experts": "의사 & 전문가",
+    "hospitals": "파트너 병원\n& 클리닉",
+    "countries": "서비스 국가",
+    "viewPartners": "모든 파트너 보기"
+  },
+  "footer": {
+    "desc": "ToplifeAI는 인공지능과 정밀 의학을 활용하여 맞춤형 종합 건강 관리 서비스를 제공합니다.",
+    "services": "서비스",
+    "serviceConsult": "전문 상담",
+    "serviceGene": "유전자 검사",
+    "servicePediatrics": "국제 소아과",
+    "serviceBeauty": "미용 & 뷰티",
+    "serviceScreening": "건강 검진",
+    "serviceWellness": "웰니스 & 장수",
+    "company": "회사",
+    "aboutUs": "회사 소개",
+    "doctorTeam": "의료팀",
+    "aiTech": "AI 기술",
+    "newsBlog": "뉴스 & 블로그",
+    "intPatients": "국제 환자",
+    "careers": "채용",
+    "contactTitle": "문의",
+    "support247": "24시간 지원",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "cookies": "쿠키 정책"
+  }
+}

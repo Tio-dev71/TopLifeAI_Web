@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "doctors": "Doctors & Specialists",
+    "aiTech": "AI Technology",
+    "about": "About Us",
+    "news": "News",
+    "contact": "Contact",
+    "login": "Sign Up / Sign In",
+    "logout": "Sign Out",
+    "selectLang": "Select language",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "serviceDropdown": {
+    "title": "ToplifeAI Services",
+    "viewAll": "View all",
+    "exploreAll": "Explore all healthcare services",
+    "items": {
+      "consult": { "name": "Expert Consultation", "desc": "Online or in-person consultation with top specialists" },
+      "gene": { "name": "Genetic Testing", "desc": "Personalized precision medicine through gene analysis" },
+      "ai": { "name": "AI Health Analysis", "desc": "Risk prediction and health optimization powered by AI" },
+      "screening": { "name": "Health Screening", "desc": "Comprehensive health checkups and cancer screening" },
+      "wellness": { "name": "Wellness & Recovery", "desc": "Rehabilitation programs and holistic care" },
+      "mental": { "name": "Mental Health Care", "desc": "Psychotherapy and advanced stress management" },
+      "medicine": { "name": "Smart Medication", "desc": "Prescription tracking, reminders, and drug interactions" },
+      "telehealth": { "name": "Telehealth", "desc": "High-quality video calls with doctors anytime" }
+    }
+  },
+  "hero": {
+    "line1": "Your health.",
+    "line2": "Your data.",
+    "line3": "Your future.",
+    "desc": "ToplifeAI leverages artificial intelligence and precision medicine to personalize your comprehensive healthcare journey.",
+    "cta1": "Explore Services",
+    "cta2": "Watch Introduction"
+  },
+  "servicesBar": {
+    "gene": { "title": "Genetic Testing", "desc": "Understand your body, prevent diseases, and personalize health" },
+    "aiHealth": { "title": "AI Health Assistant", "desc": "24/7 AI assistant monitoring and supporting your health" },
+    "records": { "title": "Digital Health Records", "desc": "Secure medical data storage, accessible anytime anywhere" },
+    "doctors": { "title": "Doctors & Specialists", "desc": "Book consultations with leading medical experts" },
+    "international": { "title": "International Patients", "desc": "Support for international patients seeking treatment in Vietnam" },
+    "wellness": { "title": "Wellness & Longevity", "desc": "Proactive health care and longevity programs" }
+  },
+  "solutions": {
+    "heading": "Comprehensive health",
+    "headingHighlight": "solutions",
+    "headingSuffix": "for you and your family",
+    "viewAllServices": "View all services",
+    "cards": {
+      "gene": { "title": "Gene & Precision Health", "desc": "Decode your genes – Understand your body – Prevent diseases" },
+      "ai": { "title": "AI Health & Tracking", "desc": "Monitor health, receive early alerts, and personalized recommendations" },
+      "medical": { "title": "Medical Consultation", "desc": "Online or in-person consultation with top experts" },
+      "wellness": { "title": "Wellness & Longevity", "desc": "Nutrition, exercise, sleep, and healthy lifestyle habits" }
+    },
+    "international": {
+      "title": "For International Patients",
+      "desc": "ToplifeAI accompanies you on your medical journey in Vietnam",
+      "feature1": "Remote Consultation",
+      "feature1Desc": "Highly skilled medical team",
+      "feature2": "Personalized Treatment Plan",
+      "feature2Desc": "Tailored to your condition",
+      "feature3": "Comprehensive Support",
+      "feature3Desc": "Medical visa, transfers, interpreting, accommodation",
+      "feature4": "Post-Treatment Care",
+      "feature4Desc": "Follow-up consultations after returning home",
+      "learnMore": "Learn More"
+    }
+  },
+  "trust": {
+    "heading": "Trusted by millions of users\nand leading healthcare partners",
+    "users": "Trusted users",
+    "experts": "Doctors & specialists",
+    "hospitals": "Partner hospitals\n& clinics",
+    "countries": "Countries served",
+    "viewPartners": "View all partners"
+  },
+  "footer": {
+    "desc": "ToplifeAI leverages artificial intelligence and precision medicine to personalize your comprehensive healthcare journey.",
+    "services": "Services",
+    "serviceConsult": "Expert Consultation",
+    "serviceGene": "Genetic Testing",
+    "servicePediatrics": "International Pediatrics",
+    "serviceBeauty": "Aesthetics & Beauty",
+    "serviceScreening": "Health Screening",
+    "serviceWellness": "Wellness & Longevity",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "doctorTeam": "Medical Team",
+    "aiTech": "AI Technology",
+    "newsBlog": "News & Blog",
+    "intPatients": "International Patients",
+    "careers": "Careers",
+    "contactTitle": "Contact",
+    "support247": "24/7 Support",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  }
+}
