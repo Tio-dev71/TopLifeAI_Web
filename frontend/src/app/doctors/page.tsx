@@ -9,9 +9,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "@/i18n/provider";
 
 export default function DoctorsPage() {
-   const [doctors, setDoctors] = useState<any[]>([]);
+   const [doctors, setDoctors] = useState<unknown[]>([]);
    const [loading, setLoading] = useState(true);
-   const { t } = useTranslation();
 
    useEffect(() => {
       const fetchDoctors = async () => {

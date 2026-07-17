@@ -10,9 +10,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "@/i18n/provider";
 
 export default function NewsPage() {
-   const [articles, setArticles] = useState<any[]>([]);
+   const [articles, setArticles] = useState<unknown[]>([]);
    const [loading, setLoading] = useState(true);
-   const { t } = useTranslation();
 
    useEffect(() => {
       const fetchArticles = async () => {
@@ -202,30 +201,33 @@ export default function NewsPage() {
                            </div>
                         ) : (
                            <div className="grid md:grid-cols-2 gap-6">
-                              {latestPosts.map((post: any, idx: number) => (
+                              {latestPosts.map((post: unknown, idx: number) => {
+                                 const p = post as { title?: string, coverImage?: string, category?: string, excerpt?: string, createdAt?: string, author?: { firstName?: string } };
+                                 return (
                                  <Card key={idx} className="overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-[20px] transition-all group cursor-pointer flex flex-col bg-white">
                                     <div className="relative h-[220px] w-full overflow-hidden bg-slate-100">
-                                       <Image src={post.coverImage || "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69"} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                                       <Image src={p.coverImage || "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69"} alt={p.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                                     </div>
                                     <CardContent className="p-6 flex flex-col flex-1">
                                        <div className="flex items-center justify-between mb-4">
-                                          <span className="text-[10px] font-bold text-teal-600 px-2.5 py-1 bg-teal-50 rounded uppercase tracking-wider">{post.category || 'Tin tức'}</span>
+                                          <span className="text-[10px] font-bold text-teal-600 px-2.5 py-1 bg-teal-50 rounded uppercase tracking-wider">{p.category || 'Tin tức'}</span>
                                           <span className="text-[12px] text-slate-500 font-medium">5 phút đọc</span>
                                        </div>
-                                       <h4 className="font-bold text-[18px] text-[#1B3A6B] mb-3 group-hover:text-teal-600 transition-colors line-clamp-2 leading-tight">{post.title}</h4>
-                                       <p className="text-[14px] text-slate-600 mb-6 line-clamp-2 flex-1 leading-relaxed">{post.excerpt}</p>
+                                       <h4 className="font-bold text-[18px] text-[#1B3A6B] mb-3 group-hover:text-teal-600 transition-colors line-clamp-2 leading-tight">{p.title}</h4>
+                                       <p className="text-[14px] text-slate-600 mb-6 line-clamp-2 flex-1 leading-relaxed">{p.excerpt}</p>
                                        <div className="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
                                           <div className="flex items-center gap-2.5">
                                              <div className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[11px] font-bold text-teal-600 overflow-hidden">
-                                                {post.author?.firstName?.charAt(0) || 'A'}
+                                                {p.author?.firstName?.charAt(0) || 'A'}
                                              </div>
-                                             <span className="text-[13px] font-bold text-[#1B3A6B]">{post.author?.firstName || 'Admin'}</span>
+                                             <span className="text-[13px] font-bold text-[#1B3A6B]">{p.author?.firstName || 'Admin'}</span>
                                           </div>
-                                          <span className="text-[12px] text-slate-400 font-medium">{new Date(post.createdAt).toLocaleDateString('vi-VN')}</span>
+                                          <span className="text-[12px] text-slate-400 font-medium">{new Date(p.createdAt).toLocaleDateString('vi-VN')}</span>
                                        </div>
                                     </CardContent>
                                  </Card>
-                              ))}
+                              )}
+                              )}
                            </div>
                         )}
                         <div className="mt-12 text-center">
