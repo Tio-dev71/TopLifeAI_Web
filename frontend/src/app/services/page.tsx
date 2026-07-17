@@ -9,7 +9,7 @@ export default function ServicesPage() {
       name: "Khám & Tư vấn với chuyên gia",
       icon: <Stethoscope className="w-8 h-8 text-teal-600" />,
       desc: "Tư vấn trực tuyến hoặc trực tiếp với các bác sĩ đầu ngành trong và ngoài nước.",
-      img: "https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Xét nghiệm Gene & Y học chính xác",
@@ -45,7 +45,7 @@ export default function ServicesPage() {
       name: "Tầm soát & Kiểm tra sức khỏe",
       icon: <Activity className="w-8 h-8 text-teal-600" />,
       desc: "Gói kiểm tra sức khỏe tổng quát, tầm soát ung thư và bệnh lý mạn tính toàn diện.",
-      img: "https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Wellness & Phục hồi sức khỏe",
@@ -152,7 +152,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div className="relative h-[180px] w-full overflow-hidden shrink-0">
-                  <img src={service.img} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={service.img} alt={service.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             ))}

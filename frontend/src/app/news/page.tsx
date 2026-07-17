@@ -36,7 +36,7 @@ export default function NewsPage() {
    ];
 
    const videos = [
-      { title: "AI trong y tế: Cơ hội và thách thức", views: "1.2K lượt xem", time: "05:12", img: "https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
+      { title: "AI trong y tế: Cơ hội và thách thức", views: "1.2K lượt xem", time: "05:12", img: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { title: "Dinh dưỡng cân bằng cho gia đình", views: "856 lượt xem", time: "04:38", img: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { title: "5 bài tập đơn giản tại nhà mỗi ngày", views: "1K lượt xem", time: "03:48", img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
    ];
@@ -47,7 +47,7 @@ export default function NewsPage() {
          <section className="relative pb-32 overflow-hidden bg-gradient-to-r from-[#F0F7F9] to-[#E3F2F3] lg:to-transparent">
             <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 relative z-10">
                {/* Breadcrumb */}
-               <div className="flex items-center text-[13px] text-slate-500 mb-8 font-medium">
+               <div className="flex items-center pt-8 text-[13px] text-slate-500 mb-8 font-medium">
                   <Link href="/" className="hover:text-teal-600 transition-colors">Trang chủ</Link>
                   <span className="mx-2">&rsaquo;</span>
                   <span className="text-slate-800">Tin tức</span>

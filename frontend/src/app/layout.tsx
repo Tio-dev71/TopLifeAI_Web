@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -9,9 +9,15 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const figtree = Figtree({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "ToplifeAI",
-  description: "Make Personalized Healthcare Accessible For Everyone.",
+  title: "ToplifeAI — Nền tảng Chăm sóc Sức khỏe AI",
+  description: "ToplifeAI ứng dụng trí tuệ nhân tạo và y học chính xác để cá nhân hóa hành trình chăm sóc sức khỏe toàn diện cho bạn.",
   icons: {
     icon: "/logotoplifeAI.png",
   },
@@ -24,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased min-h-screen flex flex-col font-sans`}>
+      <body className={`${inter.variable} ${figtree.variable} antialiased min-h-screen flex flex-col font-sans`}>
         <Navbar />
         <main className="flex-1">
           {children}

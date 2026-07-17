@@ -4,6 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/lib/supabase";
@@ -11,6 +12,8 @@ import { supabase } from "@/lib/supabase";
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [session, setSession] = useState<any>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -24,6 +27,15 @@ export function Navbar() {
     });
 
     return () => subscription.unsubscribe();
+  }, []);
+
+  // Scroll-aware glassmorphism effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLogout = async () => {
@@ -45,8 +57,19 @@ export function Navbar() {
     { name: "Liên hệ", href: "/contact" },
   ];
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <header
+      className={`sticky top-0 z-50 w-full border-b transition-all duration-300 ${
+        scrolled
+          ? "bg-white/80 backdrop-blur-xl border-slate-200/60 shadow-[0_2px_20px_-4px_rgba(0,0,0,0.08)]"
+          : "bg-white/95 backdrop-blur-md border-slate-100 shadow-sm"
+      }`}
+    >
       <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 h-[76px] flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
@@ -59,11 +82,23 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="py-2 text-[15px] font-bold text-slate-800 hover:text-teal-600 transition-colors flex items-center gap-1"
+              className={`relative py-2 text-[15px] font-bold transition-colors flex items-center gap-1 ${
+                isActive(link.href)
+                  ? "text-teal-600"
+                  : "text-slate-800 hover:text-teal-600"
+              }`}
             >
               {link.name}
               {link.hasDropdown && (
                 <ChevronDown className="w-3.5 h-3.5 opacity-50" />
+              )}
+              {/* Active indicator line */}
+              {isActive(link.href) && (
+                <motion.div
+                  layoutId="activeNav"
+                  className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-teal-600 rounded-full"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
               )}
             </Link>
           ))}
@@ -72,7 +107,10 @@ export function Navbar() {
         {/* Right side */}
         <div className="hidden xl:flex items-center gap-6">
           {/* Language Selector */}
-          <button className="flex items-center gap-1.5 py-2 text-[15px] font-bold text-slate-800 hover:text-teal-600 transition-colors">
+          <button
+            className="flex items-center gap-1.5 py-2 text-[15px] font-bold text-slate-800 hover:text-teal-600 transition-colors"
+            aria-label="Chọn ngôn ngữ: Tiếng Việt"
+          >
             <Globe className="w-4 h-4" />
             <span>VI</span>
             <ChevronDown className="w-3.5 h-3.5 opacity-50" />
@@ -94,7 +132,7 @@ export function Navbar() {
           ) : (
             <Link
               href="/login"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-[15px] font-bold text-white bg-teal-600 hover:bg-teal-700 rounded-lg transition-all shadow-sm hover:shadow-md"
             >
               Đăng ký / Đăng nhập
             </Link>
@@ -105,6 +143,8 @@ export function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="xl:hidden p-2 text-slate-600 hover:text-teal-600 transition-colors"
+          aria-label={mobileOpen ? "Đóng menu" : "Mở menu điều hướng"}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? (
             <X className="w-6 h-6" />
@@ -129,13 +169,20 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"
+                className={`block px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
+                  isActive(link.href)
+                    ? "text-teal-600 bg-teal-50 font-bold"
+                    : "text-slate-600 hover:text-teal-600 hover:bg-teal-50"
+                }`}
               >
                 {link.name}
               </Link>
             ))}
             <div className="pt-4 border-t border-slate-100 space-y-3">
-              <button className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600">
+              <button
+                className="flex items-center gap-2 px-4 py-2 text-sm text-slate-600"
+                aria-label="Chọn ngôn ngữ"
+              >
                 <Globe className="w-4 h-4" />
                 VI - Tiếng Việt
               </button>

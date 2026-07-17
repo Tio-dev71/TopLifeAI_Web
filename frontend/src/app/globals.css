@@ -8,6 +8,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
   --font-mono: var(--font-mono);
   
   --color-primary: var(--primary);
@@ -99,5 +100,39 @@
   }
   html {
     @apply font-sans scroll-smooth;
+  }
+
+  /* Healthcare typography: Figtree for headings (medical, clean, professional) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+  }
+
+  /* UX Rule #29: cursor-pointer on all interactive elements */
+  a, button, [role="button"], select, summary,
+  input[type="submit"], input[type="button"], input[type="reset"],
+  input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+  }
+
+  /* UX Rule #28: Visible focus states for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Smooth transitions as baseline for hover effects (150-300ms range) */
+  a, button, [role="button"] {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+}
+
+/* UX Rule #9: Respect prefers-reduced-motion (Severity: HIGH) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

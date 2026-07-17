@@ -9,7 +9,7 @@ export default function AITechnologyPage() {
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative pt-20 pb-20 overflow-hidden bg-gradient-to-b from-teal-50/50 to-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 space-y-8">
               <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-slate-800 leading-tight">
@@ -79,7 +79,7 @@ export default function AITechnologyPage() {
 
       {/* Platform Section */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-slate-800 inline-block relative">
               Nền tảng AI toàn diện của ToplifeAI
@@ -112,7 +112,7 @@ export default function AITechnologyPage() {
 
       {/* Tech exclusive */}
       <section className="py-5 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
               <h2 className="text-3xl font-bold text-slate-800 mb-4">Công nghệ & nền tảng độc quyền</h2>
@@ -147,7 +147,7 @@ export default function AITechnologyPage() {
 
       {/* Security */}
       <section className="py-16 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-4">
+        <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/4">
               <h3 className="text-2xl font-bold text-slate-800 mb-2">Bảo mật &<br />tiêu chuẩn quốc tế</h3>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Phone, MessageCircle, Mail, MapPin, Calendar, Clock, ChevronDown, CheckCircle2, ChevronRight, User, ClipboardList, Info } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -29,7 +29,7 @@ export default function ContactPage() {
                <Image src="/anh1tranglienhe.png" alt="Customer Support Background" width={2560} height={1000} className="w-full h-auto opacity-50 lg:opacity-100 scale-[1.12] origin-left" priority unoptimized />
             </div>
 
-            <div className="max-w-384 pt-5 w-full mx-auto px-6 lg:px-12 relative z-10">
+            <div className="max-w-384 pt-8 w-full mx-auto px-6 lg:px-12 relative z-10">
                <div className="absolute flex items-center text-[13px] text-slate-500 mb-8 font-medium">
                   <Link href="/" className="hover:text-teal-600 transition-colors">Trang chủ</Link>
                   <span className="mx-2">&rsaquo;</span>
@@ -37,9 +37,9 @@ export default function ContactPage() {
                </div>
 
                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 lg:items-center">
-                  <motion.div 
-                     initial={{ opacity: 0, x: -30 }} 
-                     animate={{ opacity: 1, x: 0 }} 
+                  <motion.div
+                     initial={{ opacity: 0, x: -30 }}
+                     animate={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.6 }}
                      className="lg:w-[45%] xl:w-[40%] flex flex-col pt-2 pb-8 lg:pb-16 relative z-20"
                   >
@@ -73,9 +73,9 @@ export default function ContactPage() {
                         </div>
                      </div>
                   </motion.div>
-                  <motion.div 
-                     initial={{ opacity: 0, y: 30 }} 
-                     animate={{ opacity: 1, y: 0 }} 
+                  <motion.div
+                     initial={{ opacity: 0, y: 30 }}
+                     animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.6, delay: 0.2 }}
                      className="lg:w-[45%] xl:w-[40%] relative z-30"
                   >
@@ -141,7 +141,7 @@ export default function ContactPage() {
 
          {/* Quick Contact Channels */}
          <section className="py-20 bg-white">
-            <motion.div 
+            <motion.div
                initial={{ opacity: 0, y: 40 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
@@ -186,7 +186,7 @@ export default function ContactPage() {
 
          {/* Offices */}
          <section className="py-20 bg-[#F8FBFC]">
-            <motion.div 
+            <motion.div
                initial={{ opacity: 0, y: 40 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
@@ -199,7 +199,7 @@ export default function ContactPage() {
                   {[
                      { img: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Trụ sở chính", city: "Hà Nội", address: "Tầng 12, Tòa nhà Center Building,\n1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội", phone: "+84 888 123 456", email: "hanoi@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
                      { img: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng", city: "TP. Hồ Chí Minh", address: "Tầng 9, Tòa nhà Mplaza Saigon,\n39 Lê Duẩn, Quận 1, TP. Hồ Chí Minh", phone: "+84 888 123 456", email: "hcm@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
-                     { img: "https://images.unsplash.com/photo-1546436836-07a91091f11c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng quốc tế", city: "Singapore", address: "20 Collyer Quay, #09-01\nSingapore 049319", phone: "+65 9082 1883", email: "singapore@toplifeai.com", time: "Thứ 2 - Thứ 6: 9:00 - 18:00" },
+                     { img: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng quốc tế", city: "Singapore", address: "20 Collyer Quay, #09-01\nSingapore 049319", phone: "+65 9082 1883", email: "singapore@toplifeai.com", time: "Thứ 2 - Thứ 6: 9:00 - 18:00" },
                   ].map((office, idx) => (
                      <Card key={idx} className="overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] bg-white group">
                         <div className="relative h-[200px] w-full overflow-hidden">
@@ -252,11 +252,21 @@ export default function ContactPage() {
                                  <span className="font-bold text-[15px] text-[#1B3A6B] pr-4">{faq.q}</span>
                                  <ChevronDown className={`w-5 h-5 text-slate-400 shrink-0 transition-transform ${activeFaq === idx ? "rotate-180" : ""}`} />
                               </button>
-                              {activeFaq === idx && (
-                                 <div className="px-4 pb-5 text-[14px] text-slate-600 font-medium leading-relaxed">
-                                    {faq.a}
-                                 </div>
-                              )}
+                              <AnimatePresence initial={false}>
+                                 {activeFaq === idx && (
+                                    <motion.div
+                                       initial={{ height: 0, opacity: 0 }}
+                                       animate={{ height: "auto", opacity: 1 }}
+                                       exit={{ height: 0, opacity: 0 }}
+                                       transition={{ duration: 0.25, ease: "easeInOut" }}
+                                       className="overflow-hidden"
+                                    >
+                                       <div className="px-4 pb-5 text-[14px] text-slate-600 font-medium leading-relaxed">
+                                          {faq.a}
+                                       </div>
+                                    </motion.div>
+                                 )}
+                              </AnimatePresence>
                            </div>
                         ))}
                      </div>

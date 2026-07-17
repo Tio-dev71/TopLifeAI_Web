@@ -9,7 +9,7 @@ export default function DoctorsPage() {
    const featuredDoctors = [
       { name: "TS.BS. Thanh Hà", specialty: "Nhi khoa", hospital: "Bệnh viện Nhi Trung ương", rating: 4.9, reviews: 126, exp: "Hơn 20 năm kinh nghiệm trong lĩnh vực nhi khoa, đặc biệt về dị ứng, miễn dịch và hô hấp trẻ em.", langs: ["VI", "EN"], img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "GS.TS.BS. Phạm Minh Tuấn", specialty: "Phẫu thuật chỉnh hình", hospital: "Bệnh viện Việt Đức", rating: 4.9, reviews: 96, exp: "Chuyên gia hàng đầu về phẫu thuật khớp, thay khớp gối, khớp háng và chấn thương chỉnh hình.", langs: ["VI", "EN"], img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-      { name: "TS.BS. Lê Hồng Nhung", specialty: "Thẩm mỹ", hospital: "Bệnh viện Thẩm mỹ Thu Cúc", rating: 4.8, reviews: 84, exp: "Chuyên gia phẫu thuật thẩm mỹ nội khoa và phẫu thuật thẩm mỹ với hơn 15 năm kinh nghiệm.", langs: ["VI", "EN", "KO"], img: "https://images.unsplash.com/photo-1594824436998-dd1b48d0164c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
+      { name: "TS.BS. Lê Hồng Nhung", specialty: "Thẩm mỹ", hospital: "Bệnh viện Thẩm mỹ Thu Cúc", rating: 4.8, reviews: 84, exp: "Chuyên gia phẫu thuật thẩm mỹ nội khoa và phẫu thuật thẩm mỹ với hơn 15 năm kinh nghiệm.", langs: ["VI", "EN", "KO"], img: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "PGS.TS.BS. Nguyễn Hoàng Bắc", specialty: "Ngoại khoa tiêu hóa", hospital: "Bệnh viện Bạch Mai", rating: 4.9, reviews: 112, exp: "Chuyên gia phẫu thuật nội soi tiêu hóa, điều trị bệnh lý dạ dày, gan mật, tụy và đại trực tràng.", langs: ["VI", "EN"], img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "ThS.BS. Trần Thu Thảo", specialty: "Sản phụ khoa & IVF", hospital: "Bệnh viện Phụ sản TW", rating: 4.8, reviews: 73, exp: "Chuyên gia hỗ trợ sinh sản (IVF), điều trị vô sinh hiếm muộn và sản phụ khoa.", langs: ["VI", "EN"], img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
    ];
@@ -18,7 +18,7 @@ export default function DoctorsPage() {
       { name: "BS.CKII. Nguyễn Thị Kim Dung", specialty: "Tim mạch", hospital: "Bệnh viện Tim Hà Nội", rating: 4.8, reviews: 57, img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
       { name: "PGS.TS.BS. Trần Văn Long", specialty: "Tai mũi họng", hospital: "Bệnh viện Tai Mũi Họng TƯ", rating: 4.9, reviews: 65, img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
       { name: "TS.BS. Vũ Thành Nhân", specialty: "Ung bướu", hospital: "Bệnh viện K Trung ương", rating: 4.8, reviews: 59, img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
-      { name: "ThS.BS. Đỗ Minh Hằng", specialty: "Răng hàm mặt", hospital: "Bệnh viện Răng Hàm Mặt TƯ", rating: 4.9, reviews: 88, img: "https://images.unsplash.com/photo-1594824436998-dd1b48d0164c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
+      { name: "ThS.BS. Đỗ Minh Hằng", specialty: "Răng hàm mặt", hospital: "Bệnh viện Răng Hàm Mặt TƯ", rating: 4.9, reviews: 88, img: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
       { name: "TS.BS. Lê Quang Huy", specialty: "Y học cổ truyền", hospital: "Bệnh viện YHCT Trung ương", rating: 4.8, reviews: 44, img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
       { name: "ThS.BS. Phạm Thị Mai", specialty: "Dinh dưỡng lâm sàng", hospital: "Bệnh viện Bạch Mai", rating: 4.7, reviews: 35, img: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
       { name: "ThS.BS. Nguyễn Quang Anh", specialty: "Gene & Di truyền", hospital: "Trung tâm Gen & Công nghệ cao", rating: 4.9, reviews: 52, img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" },
@@ -160,7 +160,7 @@ export default function DoctorsPage() {
                      <div key={idx} className="bg-white rounded-[24px] border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] hover:shadow-xl hover:shadow-teal-900/5 transition-all overflow-hidden flex flex-col group">
                         <div className="relative h-[220px] w-full bg-[#EEF2F6]">
                            <Image src={doc.img} alt={doc.name} fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                           <div className="absolute top-4 right-4 w-8 h-8 bg-white/90 border border-teal-100 rounded-full flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white cursor-pointer transition-colors shadow-sm">
+                           <div className="absolute top-4 right-4 w-8 h-8 bg-white/90 border border-teal-100 rounded-full flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white cursor-pointer transition-colors shadow-sm" role="button" aria-label={`Lưu bác sĩ ${doc.name}`}>
                               <svg className="w-[14px] h-[14px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                            </div>
                         </div>
@@ -218,7 +218,7 @@ export default function DoctorsPage() {
                               <span className="text-[10px] text-slate-400">({doc.reviews} đánh giá)</span>
                            </div>
                         </div>
-                        <div className="w-[32px] h-[32px] rounded-full border border-teal-50 bg-teal-50/30 flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white transition-colors shrink-0 self-start">
+                        <div className="w-[32px] h-[32px] rounded-full border border-teal-50 bg-teal-50/30 flex items-center justify-center text-teal-600 hover:bg-teal-600 hover:text-white transition-colors shrink-0 self-start cursor-pointer" role="button" aria-label={`Lưu bác sĩ ${doc.name}`}>
                            <svg className="w-[14px] h-[14px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
                         </div>
                      </div>

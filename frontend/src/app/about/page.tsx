@@ -8,7 +8,7 @@ export default function AboutPage() {
    const leadership = [
       { name: "Nguyễn Hòa Bình", title: "Nhà sáng lập & CEO", desc: "Hơn 20 năm kinh nghiệm trong lĩnh vực y tế, công nghệ và phát triển hệ sinh thái sức khỏe tại Việt Nam.", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "TS.BS. Thanh Hà", title: "Giám đốc Y khoa", desc: "Bác sĩ Nhi khoa hàng đầu tại Bệnh viện Nhi Trung ương với hơn 20 năm kinh nghiệm lâm sàng.", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-      { name: "ThS.BS. Hằng", title: "Giám đốc Chuyên môn", desc: "Chuyên gia trong lĩnh vực y học dự phòng, dinh dưỡng và quản lý sức khỏe chủ động.", img: "https://images.unsplash.com/photo-1594824436998-dd1b48d0164c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
+      { name: "ThS.BS. Hằng", title: "Giám đốc Chuyên môn", desc: "Chuyên gia trong lĩnh vực y học dự phòng, dinh dưỡng và quản lý sức khỏe chủ động.", img: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "Trần Quang Minh", title: "Giám đốc Công nghệ (CTO)", desc: "Chuyên gia AI & dữ liệu với 15+ năm kinh nghiệm phát triển các nền tảng công nghệ quy mô lớn.", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
       { name: "Lê Tuấn Anh", title: "Giám đốc Vận hành (COO)", desc: "Kinh nghiệm quản trị, vận hành và phát triển hệ thống y tế, dịch vụ khách hàng trên toàn quốc.", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
    ];
@@ -16,7 +16,7 @@ export default function AboutPage() {
    return (
       <div className="flex flex-col min-h-screen bg-[#F8FBFC]">
          {/* Hero Section */}
-         <section className="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden bg-gradient-to-r from-[#F0F7F9] to-transparent">
+         <section className="relative pb-20 pt-8 lg:pb-28 overflow-hidden bg-gradient-to-r from-[#F0F7F9] to-transparent">
             <div className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 relative z-10">
                {/* Breadcrumb */}
                <div className="flex items-center text-[13px] text-slate-500 mb-8 font-medium">
