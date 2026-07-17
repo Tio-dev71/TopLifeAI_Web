@@ -19,14 +19,38 @@
     "viewAll": "View all",
     "exploreAll": "Explore all healthcare services",
     "items": {
-      "consult": { "name": "Expert Consultation", "desc": "Online or in-person consultation with top specialists" },
-      "gene": { "name": "Genetic Testing", "desc": "Personalized precision medicine through gene analysis" },
-      "ai": { "name": "AI Health Analysis", "desc": "Risk prediction and health optimization powered by AI" },
-      "screening": { "name": "Health Screening", "desc": "Comprehensive health checkups and cancer screening" },
-      "wellness": { "name": "Wellness & Recovery", "desc": "Rehabilitation programs and holistic care" },
-      "mental": { "name": "Mental Health Care", "desc": "Psychotherapy and advanced stress management" },
-      "medicine": { "name": "Smart Medication", "desc": "Prescription tracking, reminders, and drug interactions" },
-      "telehealth": { "name": "Telehealth", "desc": "High-quality video calls with doctors anytime" }
+      "consult": {
+        "name": "Expert Consultation",
+        "desc": "Online or in-person consultation with top specialists"
+      },
+      "gene": {
+        "name": "Genetic Testing",
+        "desc": "Personalized precision medicine through gene analysis"
+      },
+      "ai": {
+        "name": "AI Health Analysis",
+        "desc": "Risk prediction and health optimization powered by AI"
+      },
+      "screening": {
+        "name": "Health Screening",
+        "desc": "Comprehensive health checkups and cancer screening"
+      },
+      "wellness": {
+        "name": "Wellness & Recovery",
+        "desc": "Rehabilitation programs and holistic care"
+      },
+      "mental": {
+        "name": "Mental Health Care",
+        "desc": "Psychotherapy and advanced stress management"
+      },
+      "medicine": {
+        "name": "Smart Medication",
+        "desc": "Prescription tracking, reminders, and drug interactions"
+      },
+      "telehealth": {
+        "name": "Telehealth",
+        "desc": "High-quality video calls with doctors anytime"
+      }
     }
   },
   "hero": {
@@ -38,12 +62,30 @@
     "cta2": "Watch Introduction"
   },
   "servicesBar": {
-    "gene": { "title": "Genetic Testing", "desc": "Understand your body, prevent diseases, and personalize health" },
-    "aiHealth": { "title": "AI Health Assistant", "desc": "24/7 AI assistant monitoring and supporting your health" },
-    "records": { "title": "Digital Health Records", "desc": "Secure medical data storage, accessible anytime anywhere" },
-    "doctors": { "title": "Doctors & Specialists", "desc": "Book consultations with leading medical experts" },
-    "international": { "title": "International Patients", "desc": "Support for international patients seeking treatment in Vietnam" },
-    "wellness": { "title": "Wellness & Longevity", "desc": "Proactive health care and longevity programs" }
+    "gene": {
+      "title": "Genetic Testing",
+      "desc": "Understand your body, prevent diseases, and personalize health"
+    },
+    "aiHealth": {
+      "title": "AI Health Assistant",
+      "desc": "24/7 AI assistant monitoring and supporting your health"
+    },
+    "records": {
+      "title": "Digital Health Records",
+      "desc": "Secure medical data storage, accessible anytime anywhere"
+    },
+    "doctors": {
+      "title": "Doctors & Specialists",
+      "desc": "Book consultations with leading medical experts"
+    },
+    "international": {
+      "title": "International Patients",
+      "desc": "Support for international patients seeking treatment in Vietnam"
+    },
+    "wellness": {
+      "title": "Wellness & Longevity",
+      "desc": "Proactive health care and longevity programs"
+    }
   },
   "solutions": {
     "heading": "Comprehensive health",
@@ -51,10 +93,22 @@
     "headingSuffix": "for you and your family",
     "viewAllServices": "View all services",
     "cards": {
-      "gene": { "title": "Gene & Precision Health", "desc": "Decode your genes – Understand your body – Prevent diseases" },
-      "ai": { "title": "AI Health & Tracking", "desc": "Monitor health, receive early alerts, and personalized recommendations" },
-      "medical": { "title": "Medical Consultation", "desc": "Online or in-person consultation with top experts" },
-      "wellness": { "title": "Wellness & Longevity", "desc": "Nutrition, exercise, sleep, and healthy lifestyle habits" }
+      "gene": {
+        "title": "Gene & Precision Health",
+        "desc": "Decode your genes – Understand your body – Prevent diseases"
+      },
+      "ai": {
+        "title": "AI Health & Tracking",
+        "desc": "Monitor health, receive early alerts, and personalized recommendations"
+      },
+      "medical": {
+        "title": "Medical Consultation",
+        "desc": "Online or in-person consultation with top experts"
+      },
+      "wellness": {
+        "title": "Wellness & Longevity",
+        "desc": "Nutrition, exercise, sleep, and healthy lifestyle habits"
+      }
     },
     "international": {
       "title": "For International Patients",
@@ -99,5 +153,329 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
+  },
+  "about": {
+    "breadcrumb": "About Us",
+    "title": "About",
+    "titleHighlight": "ToplifeAI",
+    "subtitle": "Technology for health – \nYour lifelong companion",
+    "desc": "ToplifeAI was founded with the mission to apply artificial intelligence and data science to personalize your healthcare journey, helping everyone live healthier, longer, and happier lives.",
+    "watchVideo": "Watch ToplifeAI introduction video",
+    "mission": {
+      "title": "Mission",
+      "desc": "Applying advanced AI and medical data to provide precise, personalized, and convenient healthcare solutions for everyone."
+    },
+    "vision": {
+      "title": "Vision",
+      "desc": "To become the leading AI health platform in Vietnam and the region, connecting people with the world's best medical and technology solutions."
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "v1": "Put customers' health & safety first",
+      "v2": "Accuracy – Transparency – Security",
+      "v3": "Science & Technology as the foundation",
+      "v4": "Long-term companionship – Sustainable value creation"
+    },
+    "stats": {
+      "title": "ToplifeAI in Numbers",
+      "users": "Trusted Users",
+      "doctors": "Leading Doctors & Experts",
+      "partners": "Partner Hospitals & Clinics",
+      "countries": "Countries Served",
+      "satisfaction": "Satisfied Customers"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose ToplifeAI?",
+      "healthReport": "Good",
+      "features": [
+        {
+          "title": "Advanced AI Technology",
+          "desc": "Accurate data analysis, providing personalized recommendations."
+        },
+        {
+          "title": "Leading Expert Team",
+          "desc": "Gathering highly experienced doctors and experts from major hospitals."
+        },
+        {
+          "title": "Comprehensive Health Data",
+          "desc": "Securely connect and store all your health data on a single platform."
+        },
+        {
+          "title": "Absolute Security",
+          "desc": "International security standards, protecting personal information at the highest level."
+        },
+        {
+          "title": "Comprehensive Ecosystem",
+          "desc": "From prevention, diagnosis, treatment to monitoring and post-treatment care."
+        },
+        {
+          "title": "Lifelong Companionship",
+          "desc": "ToplifeAI always accompanies you and your family on the journey of healthy living."
+        }
+      ]
+    },
+    "leadership": {
+      "title": "Leadership Team",
+      "leaders": [
+        {
+          "name": "Nguyen Hoa Binh",
+          "title": "Founder & CEO",
+          "desc": "Over 20 years of experience in healthcare, technology, and developing health ecosystems in Vietnam."
+        },
+        {
+          "name": "Dr. Thanh Ha",
+          "title": "Chief Medical Officer",
+          "desc": "Leading Pediatrician at National Children's Hospital with over 20 years of clinical experience."
+        },
+        {
+          "name": "Dr. Hang",
+          "title": "Chief Professional Officer",
+          "desc": "Expert in preventive medicine, nutrition, and proactive health management."
+        },
+        {
+          "name": "Tran Quang Minh",
+          "title": "Chief Technology Officer (CTO)",
+          "desc": "AI & Data expert with 15+ years of experience developing large-scale technology platforms."
+        },
+        {
+          "name": "Le Tuan Anh",
+          "title": "Chief Operating Officer (COO)",
+          "desc": "Experience in management, operations, and development of healthcare systems and customer service nationwide."
+        }
+      ]
+    },
+    "partners": {
+      "title": "Strategic Partners",
+      "viewAll": "View all partners"
+    },
+    "timeline": {
+      "title": "Development Journey",
+      "steps": [
+        {
+          "year": "2019",
+          "title": "ToplifeAI idea was born"
+        },
+        {
+          "year": "2020",
+          "title": "Research & develop technology platform"
+        },
+        {
+          "year": "2021",
+          "title": "Launch of the first version"
+        },
+        {
+          "year": "2022",
+          "title": "Expand cooperation with major hospitals"
+        },
+        {
+          "year": "2023",
+          "title": "Advanced AI application & personalized health"
+        },
+        {
+          "year": "2024",
+          "title": "Serving over 1 million users"
+        }
+      ]
+    },
+    "cta": {
+      "title": "ToplifeAI strives every day\nto bring you\na healthier future.",
+      "explore": "Explore Services",
+      "contact": "Contact for Cooperation"
+    }
+  },
+  "contact": {
+    "breadcrumb": "Contact",
+    "title": "Contact ToplifeAI",
+    "subtitle": "We are always ready to accompany you",
+    "desc": "For any questions, consultation or cooperation needs, the ToplifeAI team will respond quickly and provide you with the best support.",
+    "features": {
+      "f1": "In-depth consultation with doctors & experts",
+      "f2": "24/7 International patient support",
+      "f3": "Absolute information security"
+    },
+    "form": {
+      "title": "Send us a request",
+      "desc": "Please fill out the information, we will contact you as soon as possible.",
+      "name": "Full Name*",
+      "email": "Email*",
+      "phone": "Phone Number*",
+      "subject": {
+        "placeholder": "Select a topic of interest*",
+        "opt1": "Medical Consultation",
+        "opt2": "Genetic Testing",
+        "opt3": "Partnership",
+        "opt4": "Other"
+      },
+      "message": "Message Content*",
+      "terms": "I agree to the",
+      "policy": "Privacy Policy",
+      "submit": "Submit Request"
+    },
+    "quickContact": {
+      "title": "Quick Contact Channels",
+      "hotline": {
+        "title": "Hotline",
+        "sub": "24/7 Support"
+      },
+      "zalo": {
+        "title": "Zalo OA",
+        "sub": "Message Now"
+      },
+      "email": {
+        "title": "Email",
+        "sub": "Response within 2h"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Chat Now"
+      },
+      "booking": {
+        "title": "Book a Consultation",
+        "value": "Choose a suitable time",
+        "sub": "for you",
+        "linkText": "Book Now →"
+      }
+    },
+    "offices": {
+      "title": "ToplifeAI Offices",
+      "headquarters": "Headquarters",
+      "office": "Office",
+      "international": "International Office",
+      "viewAll": "View all branches"
+    },
+    "faqMap": {
+      "faqTitle": "Frequently Asked Questions",
+      "viewMore": "View more questions →",
+      "mapTitle": "We are here",
+      "hq": "ToplifeAI Headquarters",
+      "address": "12th Floor, Center Building, 1 Nguyen Huy Tuong, Thanh Xuan, Hanoi",
+      "directions": "Get Directions"
+    },
+    "cta": {
+      "title": "Need an in-depth consultation?",
+      "subtitle": "ToplifeAI's team of doctors and experts is always ready to accompany you.",
+      "f1": "1:1 Consultation with experts",
+      "f2": "Personalized health care roadmap",
+      "f3": "24/7 Online Support",
+      "button": "Book a consultation now"
+    }
+  },
+  "services": {
+    "breadcrumb": "Services",
+    "title": "Comprehensive Healthcare\nServices",
+    "desc": "ToplifeAI connects you with leading doctors and experts, along with advanced AI technology – delivering personalized, precise, and convenient healthcare solutions.",
+    "healthScore": "AI Health Score",
+    "outstanding": "Outstanding Services",
+    "learnMore": "Learn more",
+    "list": [
+      {
+        "name": "Expert Consultation",
+        "desc": "Online or in-person consultation with leading domestic and international doctors."
+      },
+      {
+        "name": "Genetic Testing & Precision Medicine",
+        "desc": "Decode genes, assess disease risks, and personalize prevention & treatment plans."
+      },
+      {
+        "name": "International Pediatrics",
+        "desc": "Intensive care and treatment for children with a team of leading pediatric experts."
+      },
+      {
+        "name": "Aesthetics & Beauty",
+        "desc": "Safe, modern aesthetic services with advanced technology and experienced specialists."
+      },
+      {
+        "name": "Orthopedic Surgery",
+        "desc": "Treatment of musculoskeletal disorders, joint replacement, arthroscopy, spinal orthopedics with advanced techniques."
+      },
+      {
+        "name": "Intensive Surgery",
+        "desc": "Digestive, hepatobiliary, urological, oncological surgery... with modern, international standard equipment."
+      },
+      {
+        "name": "Health Screening & Check-up",
+        "desc": "Comprehensive general health check-up, cancer screening, and chronic disease screening packages."
+      },
+      {
+        "name": "Wellness & Rehabilitation",
+        "desc": "Nourishing therapy, rehabilitation, traditional medicine combined with modern technology."
+      }
+    ],
+    "trust": {
+      "f1": {
+        "title": "Leading Doctors &\nExperts",
+        "desc": "Highly specialized,\nexperienced team"
+      },
+      "f2": {
+        "title": "Modern AI\nTechnology",
+        "desc": "Accurate, personalized\ndata analysis"
+      },
+      "f3": {
+        "title": "International Standard\nProcess",
+        "desc": "Safe, transparent,\neffective"
+      },
+      "f4": {
+        "title": "Absolute Information\nSecurity",
+        "desc": "Meets international\nsecurity standards"
+      },
+      "f5": {
+        "title": "Comprehensive Support\n24/7",
+        "desc": "Accompanying you\nanytime, anywhere"
+      }
+    },
+    "intl": {
+      "title": "Program for\nInternational Patients",
+      "desc": "ToplifeAI provides comprehensive support services for international patients coming to Vietnam for examination and treatment.",
+      "checks": [
+        "Remote consultation",
+        "Professional medical translation",
+        "Medical visa & invitation support",
+        "Schedule examination & treatment",
+        "Airport pickup, hotel booking",
+        "Post-treatment monitoring & care"
+      ],
+      "btn": "Learn about the program",
+      "processTitle": "Simple 6-Step Process",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Submit Request\n& Records"
+        },
+        {
+          "step": "02",
+          "title": "Consultation\n& Advice"
+        },
+        {
+          "step": "03",
+          "title": "Treatment\nPlanning"
+        },
+        {
+          "step": "04",
+          "title": "Preparation for\nVietnam"
+        },
+        {
+          "step": "05",
+          "title": "Treatment\n& Care"
+        },
+        {
+          "step": "06",
+          "title": "Post-treatment\nMonitoring"
+        }
+      ],
+      "langSupport": {
+        "title": "Multilingual Support",
+        "desc": "EN | 中文 | 한국어 | 日本語 | ភាសាខ្មែរ | Русский"
+      },
+      "partners": {
+        "title": "Reputable Hospital Partners",
+        "desc": "Vinmec, Viet Duc, National Children's Hospital, Tam Anh, Hong Ngoc..."
+      }
+    },
+    "cta": {
+      "title": "Need advice on suitable services?",
+      "desc": "Our team is always ready to support you.",
+      "btn1": "Contact Now",
+      "btn2": "Book Free Consultation"
+    }
   }
 }

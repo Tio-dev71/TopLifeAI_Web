@@ -19,14 +19,38 @@
     "viewAll": "Xem tất cả",
     "exploreAll": "Khám phá tất cả dịch vụ y tế",
     "items": {
-      "consult": { "name": "Khám & Tư vấn chuyên gia", "desc": "Tư vấn trực tuyến hoặc trực tiếp với bác sĩ đầu ngành" },
-      "gene": { "name": "Xét nghiệm Gene", "desc": "Phân tích gene và y học chính xác cá nhân hóa" },
-      "ai": { "name": "AI Phân tích sức khỏe", "desc": "Dự đoán rủi ro và tối ưu hóa sức khỏe bằng AI" },
-      "screening": { "name": "Tầm soát & Kiểm tra", "desc": "Gói kiểm tra sức khỏe tổng quát, tầm soát ung thư" },
-      "wellness": { "name": "Wellness & Phục hồi", "desc": "Chương trình phục hồi chức năng và chăm sóc toàn diện" },
-      "mental": { "name": "Chăm sóc sức khỏe tinh thần", "desc": "Tâm lý trị liệu và quản lý stress chuyên sâu" },
-      "medicine": { "name": "Quản lý thuốc thông minh", "desc": "Theo dõi đơn thuốc, nhắc nhở và tương tác thuốc" },
-      "telehealth": { "name": "Tư vấn từ xa (Telehealth)", "desc": "Video call chất lượng cao với bác sĩ mọi lúc" }
+      "consult": {
+        "name": "Khám & Tư vấn chuyên gia",
+        "desc": "Tư vấn trực tuyến hoặc trực tiếp với bác sĩ đầu ngành"
+      },
+      "gene": {
+        "name": "Xét nghiệm Gene",
+        "desc": "Phân tích gene và y học chính xác cá nhân hóa"
+      },
+      "ai": {
+        "name": "AI Phân tích sức khỏe",
+        "desc": "Dự đoán rủi ro và tối ưu hóa sức khỏe bằng AI"
+      },
+      "screening": {
+        "name": "Tầm soát & Kiểm tra",
+        "desc": "Gói kiểm tra sức khỏe tổng quát, tầm soát ung thư"
+      },
+      "wellness": {
+        "name": "Wellness & Phục hồi",
+        "desc": "Chương trình phục hồi chức năng và chăm sóc toàn diện"
+      },
+      "mental": {
+        "name": "Chăm sóc sức khỏe tinh thần",
+        "desc": "Tâm lý trị liệu và quản lý stress chuyên sâu"
+      },
+      "medicine": {
+        "name": "Quản lý thuốc thông minh",
+        "desc": "Theo dõi đơn thuốc, nhắc nhở và tương tác thuốc"
+      },
+      "telehealth": {
+        "name": "Tư vấn từ xa (Telehealth)",
+        "desc": "Video call chất lượng cao với bác sĩ mọi lúc"
+      }
     }
   },
   "hero": {
@@ -38,12 +62,30 @@
     "cta2": "Xem video giới thiệu"
   },
   "servicesBar": {
-    "gene": { "title": "Xét nghiệm Gene", "desc": "Hiểu cơ địa, phòng ngừa và cá nhân hóa sức khỏe" },
-    "aiHealth": { "title": "AI Health Assistant", "desc": "Trợ lý AI 24/7 theo dõi và đồng hành cùng bạn" },
-    "records": { "title": "Hồ sơ sức khỏe số", "desc": "Lưu trữ thông tin y tế an toàn, kết nối mọi lúc mọi nơi" },
-    "doctors": { "title": "Bác sĩ & Chuyên gia", "desc": "Đặt lịch tư vấn với các bác sĩ đầu ngành" },
-    "international": { "title": "International Patients", "desc": "Hỗ trợ người nước ngoài & Việt kiều khám chữa bệnh tại VN" },
-    "wellness": { "title": "Wellness & Longevity", "desc": "Chương trình chăm sóc sức khỏe chủ động và trường thọ" }
+    "gene": {
+      "title": "Xét nghiệm Gene",
+      "desc": "Hiểu cơ địa, phòng ngừa và cá nhân hóa sức khỏe"
+    },
+    "aiHealth": {
+      "title": "AI Health Assistant",
+      "desc": "Trợ lý AI 24/7 theo dõi và đồng hành cùng bạn"
+    },
+    "records": {
+      "title": "Hồ sơ sức khỏe số",
+      "desc": "Lưu trữ thông tin y tế an toàn, kết nối mọi lúc mọi nơi"
+    },
+    "doctors": {
+      "title": "Bác sĩ & Chuyên gia",
+      "desc": "Đặt lịch tư vấn với các bác sĩ đầu ngành"
+    },
+    "international": {
+      "title": "International Patients",
+      "desc": "Hỗ trợ người nước ngoài & Việt kiều khám chữa bệnh tại VN"
+    },
+    "wellness": {
+      "title": "Wellness & Longevity",
+      "desc": "Chương trình chăm sóc sức khỏe chủ động và trường thọ"
+    }
   },
   "solutions": {
     "heading": "Giải pháp sức khỏe",
@@ -51,10 +93,22 @@
     "headingSuffix": "cho bạn và gia đình",
     "viewAllServices": "Xem tất cả dịch vụ",
     "cards": {
-      "gene": { "title": "Gene & Precision Health", "desc": "Giải mã gen – Hiểu cơ thể – Phòng ngừa bệnh tật" },
-      "ai": { "title": "AI Health & Tracking", "desc": "Theo dõi sức khỏe, nhận cảnh báo sớm và gợi ý cá nhân hóa" },
-      "medical": { "title": "Medical Consultation", "desc": "Tư vấn trực tuyến hoặc trực tiếp với chuyên gia hàng đầu" },
-      "wellness": { "title": "Wellness & Longevity", "desc": "Dinh dưỡng, vận động, giấc ngủ và thói quen sống lành mạnh" }
+      "gene": {
+        "title": "Gene & Precision Health",
+        "desc": "Giải mã gen – Hiểu cơ thể – Phòng ngừa bệnh tật"
+      },
+      "ai": {
+        "title": "AI Health & Tracking",
+        "desc": "Theo dõi sức khỏe, nhận cảnh báo sớm và gợi ý cá nhân hóa"
+      },
+      "medical": {
+        "title": "Medical Consultation",
+        "desc": "Tư vấn trực tuyến hoặc trực tiếp với chuyên gia hàng đầu"
+      },
+      "wellness": {
+        "title": "Wellness & Longevity",
+        "desc": "Dinh dưỡng, vận động, giấc ngủ và thói quen sống lành mạnh"
+      }
     },
     "international": {
       "title": "Dành cho bệnh nhân quốc tế",
@@ -99,5 +153,329 @@
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản sử dụng",
     "cookies": "Chính sách Cookie"
+  },
+  "about": {
+    "breadcrumb": "Về chúng tôi",
+    "title": "Về",
+    "titleHighlight": "ToplifeAI",
+    "subtitle": "Công nghệ vì sức khỏe – \nĐồng hành cùng bạn trọn đời",
+    "desc": "ToplifeAI được thành lập với sứ mệnh ứng dụng trí tuệ nhân tạo và khoa học dữ liệu để cá nhân hóa hành trình chăm sóc sức khỏe, giúp mỗi người sống khỏe hơn, sống thọ hơn và hạnh phúc hơn.",
+    "watchVideo": "Xem video giới thiệu về ToplifeAI",
+    "mission": {
+      "title": "Sứ mệnh",
+      "desc": "Ứng dụng AI và dữ liệu y khoa tiên tiến để cung cấp giải pháp chăm sóc sức khỏe chính xác, cá nhân hóa và tiện lợi cho tất cả mọi người."
+    },
+    "vision": {
+      "title": "Tầm nhìn",
+      "desc": "Trở thành nền tảng sức khỏe AI hàng đầu tại Việt Nam và khu vực, kết nối con người với những giải pháp y tế và công nghệ tốt nhất thế giới."
+    },
+    "coreValues": {
+      "title": "Giá trị cốt lõi",
+      "v1": "Đặt sức khỏe & sự an toàn của khách hàng lên hàng đầu",
+      "v2": "Chính xác – Minh bạch – Bảo mật",
+      "v3": "Khoa học & Công nghệ làm nền tảng",
+      "v4": "Đồng hành dài hạn – Tạo giá trị bền vững"
+    },
+    "stats": {
+      "title": "ToplifeAI qua những con số",
+      "users": "Người dùng tin tưởng",
+      "doctors": "Bác sĩ & chuyên gia hàng đầu",
+      "partners": "Bệnh viện & phòng khám đối tác",
+      "countries": "Quốc gia phục vụ",
+      "satisfaction": "Khách hàng hài lòng"
+    },
+    "whyChooseUs": {
+      "title": "Vì sao chọn ToplifeAI?",
+      "healthReport": "Tốt",
+      "features": [
+        {
+          "title": "Công nghệ AI tiên tiến",
+          "desc": "Phân tích dữ liệu chính xác, đưa ra khuyến nghị phù hợp với từng cá nhân."
+        },
+        {
+          "title": "Đội ngũ chuyên gia đầu ngành",
+          "desc": "Quy tụ các bác sĩ, chuyên gia giàu kinh nghiệm tại các bệnh viện lớn."
+        },
+        {
+          "title": "Dữ liệu sức khỏe toàn diện",
+          "desc": "Kết nối và lưu trữ an toàn mọi dữ liệu sức khỏe của bạn trên một nền tảng."
+        },
+        {
+          "title": "Bảo mật tuyệt đối",
+          "desc": "Tiêu chuẩn bảo mật quốc tế, bảo vệ thông tin cá nhân ở mức cao nhất."
+        },
+        {
+          "title": "Hệ sinh thái toàn diện",
+          "desc": "Từ dự phòng, chẩn đoán, điều trị đến theo dõi và chăm sóc sau điều trị."
+        },
+        {
+          "title": "Đồng hành trọn đời",
+          "desc": "ToplifeAI luôn đồng hành cùng bạn và gia đình trên hành trình sống khỏe."
+        }
+      ]
+    },
+    "leadership": {
+      "title": "Ban lãnh đạo",
+      "leaders": [
+        {
+          "name": "Nguyễn Hòa Bình",
+          "title": "Nhà sáng lập & CEO",
+          "desc": "Hơn 20 năm kinh nghiệm trong lĩnh vực y tế, công nghệ và phát triển hệ sinh thái sức khỏe tại Việt Nam."
+        },
+        {
+          "name": "TS.BS. Thanh Hà",
+          "title": "Giám đốc Y khoa",
+          "desc": "Bác sĩ Nhi khoa hàng đầu tại Bệnh viện Nhi Trung ương với hơn 20 năm kinh nghiệm lâm sàng."
+        },
+        {
+          "name": "ThS.BS. Hằng",
+          "title": "Giám đốc Chuyên môn",
+          "desc": "Chuyên gia trong lĩnh vực y học dự phòng, dinh dưỡng và quản lý sức khỏe chủ động."
+        },
+        {
+          "name": "Trần Quang Minh",
+          "title": "Giám đốc Công nghệ (CTO)",
+          "desc": "Chuyên gia AI & dữ liệu với 15+ năm kinh nghiệm phát triển các nền tảng công nghệ quy mô lớn."
+        },
+        {
+          "name": "Lê Tuấn Anh",
+          "title": "Giám đốc Vận hành (COO)",
+          "desc": "Kinh nghiệm quản trị, vận hành và phát triển hệ thống y tế, dịch vụ khách hàng trên toàn quốc."
+        }
+      ]
+    },
+    "partners": {
+      "title": "Đối tác chiến lược",
+      "viewAll": "Xem tất cả đối tác"
+    },
+    "timeline": {
+      "title": "Hành trình phát triển",
+      "steps": [
+        {
+          "year": "2019",
+          "title": "Ý tưởng ToplifeAI ra đời"
+        },
+        {
+          "year": "2020",
+          "title": "Nghiên cứu & phát triển nền tảng công nghệ"
+        },
+        {
+          "year": "2021",
+          "title": "Ra mắt phiên bản đầu tiên"
+        },
+        {
+          "year": "2022",
+          "title": "Mở rộng hợp tác với các bệnh viện lớn"
+        },
+        {
+          "year": "2023",
+          "title": "Ứng dụng AI nâng cao & cá nhân hóa sức khỏe"
+        },
+        {
+          "year": "2024",
+          "title": "Phục vụ hơn 1 triệu người dùng"
+        }
+      ]
+    },
+    "cta": {
+      "title": "ToplifeAI luôn nỗ lực mỗi ngày\nđể mang đến cho bạn\nmột tương lai khỏe mạnh hơn.",
+      "explore": "Khám phá dịch vụ",
+      "contact": "Liên hệ hợp tác"
+    }
+  },
+  "contact": {
+    "breadcrumb": "Liên hệ",
+    "title": "Liên hệ với ToplifeAI",
+    "subtitle": "Chúng tôi luôn sẵn sàng đồng hành cùng bạn",
+    "desc": "Mọi thắc mắc, nhu cầu tư vấn hoặc hợp tác, đội ngũ ToplifeAI sẽ phản hồi nhanh chóng và hỗ trợ bạn tốt nhất.",
+    "features": {
+      "f1": "Tư vấn chuyên sâu với bác sĩ & chuyên gia",
+      "f2": "Hỗ trợ bệnh nhân quốc tế 24/7",
+      "f3": "Bảo mật thông tin tuyệt đối"
+    },
+    "form": {
+      "title": "Gửi yêu cầu cho chúng tôi",
+      "desc": "Vui lòng điền đầy đủ thông tin, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.",
+      "name": "Họ và tên*",
+      "email": "Email*",
+      "phone": "Số điện thoại*",
+      "subject": {
+        "placeholder": "Chọn chủ đề quan tâm*",
+        "opt1": "Tư vấn khám bệnh",
+        "opt2": "Xét nghiệm Gene",
+        "opt3": "Hợp tác đối tác",
+        "opt4": "Khác"
+      },
+      "message": "Nội dung tin nhắn*",
+      "terms": "Tôi đồng ý với",
+      "policy": "Chính sách bảo mật",
+      "submit": "Gửi yêu cầu"
+    },
+    "quickContact": {
+      "title": "Liên hệ nhanh qua các kênh",
+      "hotline": {
+        "title": "Hotline",
+        "sub": "Hỗ trợ 24/7"
+      },
+      "zalo": {
+        "title": "Zalo OA",
+        "sub": "Nhắn tin ngay"
+      },
+      "email": {
+        "title": "Email",
+        "sub": "Phản hồi trong 2h"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "sub": "Chat ngay"
+      },
+      "booking": {
+        "title": "Đặt lịch tư vấn",
+        "value": "Chọn thời gian phù hợp",
+        "sub": "với bạn",
+        "linkText": "Đặt lịch ngay →"
+      }
+    },
+    "offices": {
+      "title": "Văn phòng của ToplifeAI",
+      "headquarters": "Trụ sở chính",
+      "office": "Văn phòng",
+      "international": "Văn phòng quốc tế",
+      "viewAll": "Xem tất cả chi nhánh"
+    },
+    "faqMap": {
+      "faqTitle": "Câu hỏi thường gặp",
+      "viewMore": "Xem thêm câu hỏi →",
+      "mapTitle": "Chúng tôi ở đây",
+      "hq": "ToplifeAI Headquarters",
+      "address": "Tầng 12, Center Building, 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội",
+      "directions": "Chỉ đường"
+    },
+    "cta": {
+      "title": "Bạn cần tư vấn chuyên sâu?",
+      "subtitle": "Đội ngũ bác sĩ và chuyên gia của ToplifeAI luôn sẵn sàng đồng hành cùng bạn.",
+      "f1": "Tư vấn 1:1 với chuyên gia",
+      "f2": "Lộ trình chăm sóc sức khỏe cá nhân hóa",
+      "f3": "Hỗ trợ trực tuyến 24/7",
+      "button": "Đặt lịch tư vấn ngay"
+    }
+  },
+  "services": {
+    "breadcrumb": "Dịch vụ",
+    "title": "Dịch vụ chăm sóc\nsức khỏe toàn diện",
+    "desc": "ToplifeAI kết nối bạn với đội ngũ bác sĩ và chuyên gia hàng đầu, cùng công nghệ AI tiên tiến – mang đến giải pháp chăm sóc sức khỏe cá nhân hóa, chính xác và tiện lợi.",
+    "healthScore": "AI Health Score",
+    "outstanding": "Các dịch vụ nổi bật",
+    "learnMore": "Tìm hiểu thêm",
+    "list": [
+      {
+        "name": "Khám & Tư vấn với chuyên gia",
+        "desc": "Tư vấn trực tuyến hoặc trực tiếp với các bác sĩ đầu ngành trong và ngoài nước."
+      },
+      {
+        "name": "Xét nghiệm Gene & Y học chính xác",
+        "desc": "Giải mã gen, đánh giá nguy cơ bệnh tật và cá nhân hóa kế hoạch phòng ngừa & điều trị."
+      },
+      {
+        "name": "Nhi khoa quốc tế",
+        "desc": "Chăm sóc và điều trị chuyên sâu cho trẻ em với đội ngũ chuyên gia nhi khoa hàng đầu."
+      },
+      {
+        "name": "Thẩm mỹ & Làm đẹp",
+        "desc": "Dịch vụ thẩm mỹ an toàn, hiện đại với công nghệ tiên tiến và bác sĩ chuyên khoa giàu kinh nghiệm."
+      },
+      {
+        "name": "Phẫu thuật chỉnh hình",
+        "desc": "Điều trị các bệnh lý xương khớp, thay khớp, nội soi khớp, chỉnh hình cột sống với kỹ thuật tiên tiến."
+      },
+      {
+        "name": "Ngoại khoa chuyên sâu",
+        "desc": "Phẫu thuật tiêu hóa, gan mật, tiết niệu, ung bướu... với trang thiết bị hiện đại, chuẩn quốc tế."
+      },
+      {
+        "name": "Tầm soát & Kiểm tra sức khỏe",
+        "desc": "Gói kiểm tra sức khỏe tổng quát, tầm soát ung thư và bệnh lý mạn tính toàn diện."
+      },
+      {
+        "name": "Wellness & Phục hồi sức khỏe",
+        "desc": "Liệu trình dưỡng sinh, phục hồi chức năng, y học cổ truyền kết hợp công nghệ hiện đại."
+      }
+    ],
+    "trust": {
+      "f1": {
+        "title": "Bác sĩ & chuyên gia\nhàng đầu",
+        "desc": "Đội ngũ chuyên môn cao,\ngiàu kinh nghiệm"
+      },
+      "f2": {
+        "title": "Công nghệ AI\nhiện đại",
+        "desc": "Phân tích dữ liệu chính xác,\ncá nhân hóa"
+      },
+      "f3": {
+        "title": "Quy trình\nchuẩn quốc tế",
+        "desc": "An toàn, minh bạch,\nhiệu quả"
+      },
+      "f4": {
+        "title": "Bảo mật thông tin\ntuyệt đối",
+        "desc": "Đạt tiêu chuẩn bảo mật\nquốc tế"
+      },
+      "f5": {
+        "title": "Hỗ trợ toàn diện\n24/7",
+        "desc": "Đồng hành cùng bạn\nmọi lúc, mọi nơi"
+      }
+    },
+    "intl": {
+      "title": "Chương trình dành cho\nbệnh nhân quốc tế",
+      "desc": "ToplifeAI cung cấp dịch vụ hỗ trợ toàn diện cho bệnh nhân quốc tế khi đến Việt Nam thăm khám và điều trị.",
+      "checks": [
+        "Tư vấn & hội chẩn từ xa",
+        "Phiên dịch y tế chuyên nghiệp",
+        "Hỗ trợ visa y tế & giấy mời",
+        "Điều phối lịch khám & điều trị",
+        "Đón sân bay, đặt khách sạn",
+        "Theo dõi & chăm sóc sau điều trị"
+      ],
+      "btn": "Tìm hiểu chương trình",
+      "processTitle": "Quy trình 6 bước đơn giản",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Gửi yêu cầu\n& hồ sơ"
+        },
+        {
+          "step": "02",
+          "title": "Hội chẩn\n& tư vấn"
+        },
+        {
+          "step": "03",
+          "title": "Lên kế hoạch\nđiều trị"
+        },
+        {
+          "step": "04",
+          "title": "Chuẩn bị\nđến Việt Nam"
+        },
+        {
+          "step": "05",
+          "title": "Điều trị\n& chăm sóc"
+        },
+        {
+          "step": "06",
+          "title": "Theo dõi\nsau điều trị"
+        }
+      ],
+      "langSupport": {
+        "title": "Hỗ trợ đa ngôn ngữ",
+        "desc": "EN | 中文 | 한국어 | 日本語 | ភាសាខ្មែរ | Русский"
+      },
+      "partners": {
+        "title": "Đối tác bệnh viện uy tín",
+        "desc": "Vinmec, Việt Đức, Nhi TW, Tâm Anh, Hồng Ngọc..."
+      }
+    },
+    "cta": {
+      "title": "Bạn cần tư vấn dịch vụ phù hợp?",
+      "desc": "Đội ngũ của chúng tôi luôn sẵn sàng hỗ trợ bạn.",
+      "btn1": "Liên hệ ngay",
+      "btn2": "Đặt lịch tư vấn miễn phí"
+    }
   }
 }

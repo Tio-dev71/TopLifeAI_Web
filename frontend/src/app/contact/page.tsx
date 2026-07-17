@@ -8,9 +8,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useTranslation } from "@/i18n/provider";
 
 export default function ContactPage() {
    const [activeFaq, setActiveFaq] = useState<number | null>(0);
+   const { t } = useTranslation();
 
    const faqs = [
       { q: "ToplifeAI cung cấp những dịch vụ gì?", a: "ToplifeAI cung cấp nền tảng chăm sóc sức khỏe toàn diện tích hợp AI, bao gồm: phân tích gene, hồ sơ sức khỏe số, tư vấn trực tuyến với bác sĩ, và các chương trình chăm sóc sức khỏe cá nhân hóa." },
@@ -31,9 +33,9 @@ export default function ContactPage() {
 
             <div className="max-w-384 pt-8 w-full mx-auto px-6 lg:px-12 relative z-10">
                <div className="absolute flex items-center text-[13px] text-slate-500 mb-8 font-medium">
-                  <Link href="/" className="hover:text-teal-600 transition-colors">Trang chủ</Link>
+                  <Link href="/" className="hover:text-teal-600 transition-colors">{t("nav.home")}</Link>
                   <span className="mx-2">&rsaquo;</span>
-                  <span className="text-slate-800">Liên hệ</span>
+                  <span className="text-slate-800">{t("contact.breadcrumb")}</span>
                </div>
 
                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 lg:items-center">
@@ -44,32 +46,32 @@ export default function ContactPage() {
                      className="lg:w-[45%] xl:w-[40%] flex flex-col pt-2 pb-8 lg:pb-16 relative z-20"
                   >
                      <h1 className="text-[2.5rem] lg:text-[3.5rem] font-bold tracking-tight text-[#1B3A6B] leading-[1.1] mb-3">
-                        Liên hệ với ToplifeAI
+                        {t("contact.title")}
                      </h1>
                      <h2 className="text-[1.75rem] lg:text-[2.25rem] font-bold text-teal-600 leading-tight mb-6 max-w-lg">
-                        Chúng tôi luôn sẵn sàng đồng hành cùng bạn
+                        {t("contact.subtitle")}
                      </h2>
                      <p className="text-[15px] lg:text-[16px] text-slate-600 max-w-105 leading-relaxed mb-8 font-medium">
-                        Mọi thắc mắc, nhu cầu tư vấn hoặc hợp tác, đội ngũ ToplifeAI sẽ phản hồi nhanh chóng và hỗ trợ bạn tốt nhất.
+                        {t("contact.desc")}
                      </p>
                      <div className="space-y-4 relative z-20">
                         <div className="flex items-center gap-3">
                            <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center shrink-0">
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                            </div>
-                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">Tư vấn chuyên sâu với bác sĩ & chuyên gia</span>
+                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">{t("contact.features.f1")}</span>
                         </div>
                         <div className="flex items-center gap-3">
                            <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center shrink-0">
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                            </div>
-                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">Hỗ trợ bệnh nhân quốc tế 24/7</span>
+                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">{t("contact.features.f2")}</span>
                         </div>
                         <div className="flex items-center gap-3">
                            <div className="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center shrink-0">
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                            </div>
-                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">Bảo mật thông tin tuyệt đối</span>
+                           <span className="text-[14px] lg:text-[15px] text-[#1B3A6B] font-bold">{t("contact.features.f3")}</span>
                         </div>
                      </div>
                   </motion.div>
@@ -80,38 +82,38 @@ export default function ContactPage() {
                      className="lg:w-[45%] xl:w-[40%] relative z-30"
                   >
                      <Card className="border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.06)] bg-white p-8 lg:p-10 rounded-[20px]">
-                        <h3 className="text-[20px] font-bold text-[#1B3A6B] mb-2">Gửi yêu cầu cho chúng tôi</h3>
-                        <p className="text-[13px] text-slate-500 mb-8 font-medium">Vui lòng điền đầy đủ thông tin, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.</p>
+                        <h3 className="text-[20px] font-bold text-[#1B3A6B] mb-2">{t("contact.form.title")}</h3>
+                        <p className="text-[13px] text-slate-500 mb-8 font-medium">{t("contact.form.desc")}</p>
 
                         <form className="space-y-4">
                            <div className="relative">
                               <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                                  <User className="w-4 h-4" />
                               </div>
-                              <Input placeholder="Họ và tên*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
+                              <Input placeholder={t("contact.form.name")} className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
                            </div>
                            <div className="relative">
                               <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                                  <Mail className="w-4 h-4" />
                               </div>
-                              <Input type="email" placeholder="Email*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
+                              <Input type="email" placeholder={t("contact.form.email")} className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
                            </div>
                            <div className="relative">
                               <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                                  <Phone className="w-4 h-4" />
                               </div>
-                              <Input type="tel" placeholder="Số điện thoại*" className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
+                              <Input type="tel" placeholder={t("contact.form.phone")} className="pl-11 h-[48px] rounded-[8px] bg-white border-slate-200 text-[14px] focus-visible:ring-teal-500" required />
                            </div>
                            <div className="relative flex items-center">
                               <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                                  <ClipboardList className="w-4 h-4" />
                               </div>
                               <select defaultValue="" className="w-full pl-11 pr-10 h-[48px] rounded-[8px] bg-white border border-slate-200 text-[14px] text-slate-500 appearance-none outline-none focus:ring-1 focus:ring-teal-500 transition-shadow">
-                                 <option value="" disabled>Chọn chủ đề quan tâm*</option>
-                                 <option value="tu-van">Tư vấn khám bệnh</option>
-                                 <option value="gene">Xét nghiệm Gene</option>
-                                 <option value="hop-tac">Hợp tác đối tác</option>
-                                 <option value="khac">Khác</option>
+                                 <option value="" disabled>{t("contact.form.subject.placeholder")}</option>
+                                 <option value="tu-van">{t("contact.form.subject.opt1")}</option>
+                                 <option value="gene">{t("contact.form.subject.opt2")}</option>
+                                 <option value="hop-tac">{t("contact.form.subject.opt3")}</option>
+                                 <option value="khac">{t("contact.form.subject.opt4")}</option>
                               </select>
                               <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                            </div>
@@ -119,18 +121,18 @@ export default function ContactPage() {
                               <div className="absolute left-4 top-4 text-slate-400">
                                  <MessageCircle className="w-4 h-4" />
                               </div>
-                              <textarea className="w-full min-h-[100px] pl-11 pr-4 py-3 rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-600 outline-none focus:ring-1 focus:ring-teal-500 transition-shadow resize-none" placeholder="Nội dung tin nhắn*" required />
+                              <textarea className="w-full min-h-[100px] pl-11 pr-4 py-3 rounded-[8px] border border-slate-200 bg-white text-[14px] text-slate-600 outline-none focus:ring-1 focus:ring-teal-500 transition-shadow resize-none" placeholder={t("contact.form.message")} required />
                            </div>
 
                            <div className="flex items-start gap-3 py-2">
                               <input type="checkbox" id="terms" className="mt-0.5 w-4 h-4 text-teal-600 rounded border-slate-300 focus:ring-teal-500" required />
                               <label htmlFor="terms" className="text-[12px] text-slate-500 font-medium">
-                                 Tôi đồng ý với <Link href="#" className="text-teal-600 hover:underline font-bold">Chính sách bảo mật</Link> của ToplifeAI
+                                 {t("contact.form.terms")} <Link href="#" className="text-teal-600 hover:underline font-bold">{t("contact.form.policy")}</Link>
                               </label>
                            </div>
 
                            <Button className="w-full h-[48px] text-[15px] font-bold bg-teal-600 hover:bg-teal-700 rounded-[8px] shadow-[0_4px_14px_0_rgba(13,148,136,0.39)] transition-shadow">
-                              Gửi yêu cầu
+                              {t("contact.form.submit")}
                            </Button>
                         </form>
                      </Card>
@@ -148,15 +150,15 @@ export default function ContactPage() {
                transition={{ duration: 0.6 }}
                className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 text-center"
             >
-               <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">Liên hệ nhanh qua các kênh</h2>
+               <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">{t("contact.quickContact.title")}</h2>
 
                <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
                   {[
-                     { icon: <Phone className="w-6 h-6 text-teal-600" />, title: "Hotline", value: "+84 888 123 456", sub: "Hỗ trợ 24/7", subIcon: <Clock className="w-3.5 h-3.5" /> },
-                     { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: "Zalo OA", value: "ToplifeAI Official", sub: "Nhắn tin ngay", subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
-                     { icon: <Mail className="w-6 h-6 text-teal-600" />, title: "Email", value: "hello@toplifeai.com", sub: "Phản hồi trong 2h", subIcon: <Clock className="w-3.5 h-3.5" /> },
-                     { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: "WhatsApp", value: "+84 888 123 456", sub: "Chat ngay", subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
-                     { icon: <Calendar className="w-6 h-6 text-teal-600" />, title: "Đặt lịch tư vấn", value: "Chọn thời gian phù hợp", sub: "với bạn", isLink: true, linkText: "Đặt lịch ngay →" },
+                     { icon: <Phone className="w-6 h-6 text-teal-600" />, title: t("contact.quickContact.hotline.title"), value: "+84 888 123 456", sub: t("contact.quickContact.hotline.sub"), subIcon: <Clock className="w-3.5 h-3.5" /> },
+                     { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: t("contact.quickContact.zalo.title"), value: "ToplifeAI Official", sub: t("contact.quickContact.zalo.sub"), subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
+                     { icon: <Mail className="w-6 h-6 text-teal-600" />, title: t("contact.quickContact.email.title"), value: "hello@toplifeai.com", sub: t("contact.quickContact.email.sub"), subIcon: <Clock className="w-3.5 h-3.5" /> },
+                     { icon: <MessageCircle className="w-6 h-6 text-teal-600" />, title: t("contact.quickContact.whatsapp.title"), value: "+84 888 123 456", sub: t("contact.quickContact.whatsapp.sub"), subIcon: <CheckCircle2 className="w-3.5 h-3.5" /> },
+                     { icon: <Calendar className="w-6 h-6 text-teal-600" />, title: t("contact.quickContact.booking.title"), value: t("contact.quickContact.booking.value"), sub: t("contact.quickContact.booking.sub"), isLink: true, linkText: t("contact.quickContact.booking.linkText") },
                   ].map((item, idx) => (
                      <Card key={idx} className="border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] rounded-[20px] transition-all bg-white cursor-pointer group flex flex-col h-full">
                         <CardContent className="p-8 flex flex-col items-center text-center flex-1 justify-center">
@@ -193,13 +195,13 @@ export default function ContactPage() {
                transition={{ duration: 0.6 }}
                className="max-w-[1536px] w-full mx-auto px-6 lg:px-12 text-center"
             >
-               <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">Văn phòng của ToplifeAI</h2>
+               <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-12">{t("contact.offices.title")}</h2>
 
                <div className="grid lg:grid-cols-3 gap-8 text-left mb-12">
                   {[
-                     { img: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Trụ sở chính", city: "Hà Nội", address: "Tầng 12, Tòa nhà Center Building,\n1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội", phone: "+84 888 123 456", email: "hanoi@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
-                     { img: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng", city: "TP. Hồ Chí Minh", address: "Tầng 9, Tòa nhà Mplaza Saigon,\n39 Lê Duẩn, Quận 1, TP. Hồ Chí Minh", phone: "+84 888 123 456", email: "hcm@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
-                     { img: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: "Văn phòng quốc tế", city: "Singapore", address: "20 Collyer Quay, #09-01\nSingapore 049319", phone: "+65 9082 1883", email: "singapore@toplifeai.com", time: "Thứ 2 - Thứ 6: 9:00 - 18:00" },
+                     { img: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: t("contact.offices.headquarters"), city: "Hà Nội", address: "Tầng 12, Tòa nhà Center Building,\n1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội", phone: "+84 888 123 456", email: "hanoi@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
+                     { img: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: t("contact.offices.office"), city: "TP. Hồ Chí Minh", address: "Tầng 9, Tòa nhà Mplaza Saigon,\n39 Lê Duẩn, Quận 1, TP. Hồ Chí Minh", phone: "+84 888 123 456", email: "hcm@toplifeai.com", time: "Thứ 2 - Thứ 7: 8:00 - 17:30" },
+                     { img: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", tag: t("contact.offices.international"), city: "Singapore", address: "20 Collyer Quay, #09-01\nSingapore 049319", phone: "+65 9082 1883", email: "singapore@toplifeai.com", time: "Thứ 2 - Thứ 6: 9:00 - 18:00" },
                   ].map((office, idx) => (
                      <Card key={idx} className="overflow-hidden border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-[24px] bg-white group">
                         <div className="relative h-[200px] w-full overflow-hidden">
@@ -231,7 +233,7 @@ export default function ContactPage() {
                   ))}
                </div>
 
-               <Button variant="outline" className="h-[48px] rounded-[12px] border-teal-600 px-8 text-teal-600 font-bold hover:bg-teal-50 transition-colors">Xem tất cả chi nhánh</Button>
+               <Button variant="outline" className="h-[48px] rounded-[12px] border-teal-600 px-8 text-teal-600 font-bold hover:bg-teal-50 transition-colors">{t("contact.offices.viewAll")}</Button>
             </motion.div>
          </section>
 
@@ -241,7 +243,7 @@ export default function ContactPage() {
                <div className="flex flex-col lg:flex-row gap-16">
                   {/* FAQ */}
                   <div className="lg:w-1/2">
-                     <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">Câu hỏi thường gặp</h2>
+                     <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">{t("contact.faqMap.faqTitle")}</h2>
                      <div className="space-y-4 border border-slate-100 rounded-[20px] p-2 bg-[#FDFDFD]">
                         {faqs.map((faq, idx) => (
                            <div key={idx} className="border-b border-slate-100 last:border-0">
@@ -270,21 +272,21 @@ export default function ContactPage() {
                            </div>
                         ))}
                      </div>
-                     <Button variant="link" className="text-teal-600 font-bold p-0 mt-6 text-[14px]">Xem thêm câu hỏi →</Button>
+                     <Button variant="link" className="text-teal-600 font-bold p-0 mt-6 text-[14px]">{t("contact.faqMap.viewMore")}</Button>
                   </div>
 
                   {/* Map Placeholder */}
                   <div className="lg:w-1/2">
-                     <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">Chúng tôi ở đây</h2>
+                     <h2 className="text-[2rem] font-bold text-[#1B3A6B] mb-8">{t("contact.faqMap.mapTitle")}</h2>
                      <div className="bg-slate-100 rounded-[24px] h-[400px] w-full relative overflow-hidden shadow-sm border border-slate-100 flex items-center justify-center">
                         {/* Replace with actual embedded map or static map image */}
                         <div className="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=21.0026,105.8058&zoom=14&size=800x400&maptype=roadmap&markers=color:teal%7C21.0026,105.8058&key=YOUR_API_KEY')] bg-cover bg-center opacity-40 grayscale contrast-125"></div>
 
                         {/* Mock map popup overlay */}
                         <div className="absolute bg-white p-5 rounded-[16px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-10 w-72 translate-x-12 -translate-y-8">
-                           <h4 className="font-bold text-[14px] text-[#1B3A6B] mb-1">ToplifeAI Headquarters</h4>
-                           <p className="text-[12px] text-slate-500 font-medium mb-3">Tầng 12, Center Building, 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</p>
-                           <a href="#" className="text-[13px] font-bold text-teal-600 flex items-center">Chỉ đường <ChevronRight className="w-3.5 h-3.5 ml-1" /></a>
+                           <h4 className="font-bold text-[14px] text-[#1B3A6B] mb-1">{t("contact.faqMap.hq")}</h4>
+                           <p className="text-[12px] text-slate-500 font-medium mb-3">{t("contact.faqMap.address")}</p>
+                           <a href="#" className="text-[13px] font-bold text-teal-600 flex items-center">{t("contact.faqMap.directions")} <ChevronRight className="w-3.5 h-3.5 ml-1" /></a>
                         </div>
                         <MapPin className="absolute w-12 h-12 text-teal-600 z-10 -translate-y-1/2" />
                      </div>
@@ -299,16 +301,16 @@ export default function ContactPage() {
                <div className="bg-[#0F766E] rounded-[24px] p-8 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12 shadow-2xl">
                   {/* Left Content */}
                   <div className="relative z-10 space-y-6 max-w-xl text-white">
-                     <h2 className="text-[2.5rem] font-bold leading-tight">Bạn cần tư vấn chuyên sâu?</h2>
-                     <p className="text-teal-50 text-[15px] font-medium leading-relaxed">Đội ngũ bác sĩ và chuyên gia của ToplifeAI luôn sẵn sàng đồng hành cùng bạn.</p>
+                     <h2 className="text-[2.5rem] font-bold leading-tight">{t("contact.cta.title")}</h2>
+                     <p className="text-teal-50 text-[15px] font-medium leading-relaxed">{t("contact.cta.subtitle")}</p>
                      <ul className="space-y-4 mt-6 text-[15px] text-white font-medium">
-                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Tư vấn 1:1 với chuyên gia</li>
-                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Lộ trình chăm sóc sức khỏe cá nhân hóa</li>
-                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> Hỗ trợ trực tuyến 24/7</li>
+                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> {t("contact.cta.f1")}</li>
+                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> {t("contact.cta.f2")}</li>
+                        <li className="flex items-center gap-3"><div className="w-5 h-5 rounded-full bg-white text-[#0F766E] flex items-center justify-center shrink-0"><CheckCircle2 className="w-3.5 h-3.5" /></div> {t("contact.cta.f3")}</li>
                      </ul>
                      <div className="pt-6">
                         <Button className="h-[52px] px-8 bg-white text-[#0F766E] hover:bg-slate-100 font-bold text-[15px] rounded-[12px] shadow-lg">
-                           Đặt lịch tư vấn ngay
+                           {t("contact.cta.button")}
                         </Button>
                      </div>
                   </div>
